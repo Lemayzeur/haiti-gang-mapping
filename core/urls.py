@@ -10,4 +10,6 @@ urlpatterns = [
 
     path('report/<slug:slug>/edit/', views.GangReportUpdateView.as_view(), name='report_edit'),
     path('report/<slug:slug>/delete/', views.GangReportDeleteView.as_view(), name='report_delete'),
+
+    path('change-language/', views.change_language, name='change_language'),
 ]

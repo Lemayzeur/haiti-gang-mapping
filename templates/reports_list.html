@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 
 <section>
-	<h2 class="mb-4">Submitted Gang Reports</h2>
+	<h2 class="mb-4">{% translate 'Submitted Gang Reports' %}</h2>
 	<table class="table table-bordered">
 	    <thead>
 	        <tr>
-	            <th>Gang Name</th>
-	            <th>Department</th>
-	            <th>Main Area</th>
-	            <th>Active</th>
-	            <th>Start Date</th>
-	            <th>End Date</th>
+	            <th>{% translate 'Gang Name' %}</th>
+	            <th>{% translate 'Department' %}</th>
+	            <th>{% translate 'Main Area' %}</th>
+	            <th>{% translate 'Active' %}</th>
+	            <th>{% translate 'Start Date' %}</th>
+	            <th>{% translate 'End Date' %}</th>
 	        </tr>
 	    </thead>
 	    <tbody>
@@ -26,10 +26,10 @@
 	        </tr>
 	        {% empty %}
 	        <tr>
-	            <td colspan="6" class="text-center">No reports submitted yet.</td>
+	            <td colspan="6" class="text-center">{% translate 'No reports submitted yet.' %}</td>
 	        </tr>
 	        {% endfor %}
 	    </tbody>
 	</table>
-	<a href="{% url 'home' %}" class="btn btn-link mt-3">Back to Home</a>
+	<a href="{% url 'home' %}" class="btn btn-link mt-3">{% translate 'Back to Home' %}</a>
 </section>

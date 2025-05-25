@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from decouple import config, Csv
 
+from django.utils.translation import gettext_lazy as _
+from django.conf import global_settings,locale
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = [] if DEBUG else config('ALLOWED_HOSTS', cast=Csv())
 
 
 if DEBUG:
@@ -50,6 +53,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    # 'geogang.middlewares.LanguageMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -69,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -110,8 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
@@ -141,3 +145,28 @@ EMAIL_USE_TLS = True
 
 # Admins (used for error emails and custom alerts)
 ADMINS = [('Lub', 'groupcode9@gmail.com')]
+
+
+LANGUAGES = (
+    ('ht', '🇭🇹 Kreyòl Ayisyen'),
+    ('fr', '🇫🇷 Français'),
+    ('en', '🇺🇸 English'), 
+    ('es', '🇪🇸 Español'),   
+)
+EXTRA_LANG_INFO = {
+    'ht': {
+        'bidi': False, # right-to-left
+        'code': 'ht',
+        'name': 'Creole',
+        'name_local': u'Kreyòl Ayisyen', #unicode codepoints here
+    },
+}
+locale.LANG_INFO = dict(locale.LANG_INFO, **EXTRA_LANG_INFO)
+
+LANGUAGE_CODE = 'es'
+
+LANGUAGE_COOKIE_NAME = '_lg'
+
+LOCALE_PATHS = (
+    BASE_DIR / 'locale',
+)

@@ -91,6 +91,24 @@
             	{% endif %}
             </div>
 
+            <div class="mb-5">
+                <label for="id_department" class="form-label">{{form.department.label}} {% if form.department.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                 <select name="{{ form.department.name }}" id="{{ form.department.id_for_label }}"
+            class="form-select" required>
+                    <option selected disabled>{% translate 'Select a department' %}</option>
+                    {% for val, name in form.department.field.choices %}
+                    {% if val %}
+                    <option value="{{ val }}" {% if form.department.value == val %}selected{% endif %}>{{ name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                {% if form.department.help_text %}
+                <div class="form-text">{{ form.department.help_text }}</div>
+                {% endif %}
+            </div>
+
 			<div class="mb-5">
                 <label for="id_extra_areas" class="form-label">{% blocktranslate %}Additional places this gang controls or used to control (if any):{% endblocktranslate %}</label>
 				<div id="extra-areas-formset">
@@ -101,7 +119,7 @@
 				        	{{ form.id }}
 				            {{ form.name.label_tag }} {{ form.name|add_class:"form-control" }}
 
-				            <div class="row">
+				            <div class="row mt-3">
 				                <div class="col-md-6">
 				                    <label for="{{form.date_taken.id_for_label}}" class="form-label">{{form.date_taken.label_tag}} {% if form.date_taken.field.required %}
 				                    <span class="text-danger">*</span>
@@ -144,27 +162,11 @@
 				        </div>
 				    {% endfor %}
 				</div>
-				<button type="button" class="btn btn-secondary btn-sm" id="add-more">+ Add Another Area</button>
+				<button type="button" class="btn btn-secondary btn-sm" id="add-more">+ {% blocktranslate %}Add Another Area{% endblocktranslate %}</button>
 			</div>
 
 
-            <div class="mb-5">
-                <label for="id_department" class="form-label">{{form.department.label}} {% if form.department.field.required %}
-                    <span class="text-danger">*</span>
-                {% endif %}</label>
-                 <select name="{{ form.department.name }}" id="{{ form.department.id_for_label }}"
-            class="form-select" required>
-                    <option selected disabled>{% translate 'Select a department' %}</option>
-                    {% for val, name in form.department.field.choices %}
-                    {% if val %}
-                    <option value="{{ val }}" {% if form.department.value == val %}selected{% endif %}>{{ name }}</option>
-                    {% endif %}
-                    {% endfor %}
-                </select>
-                {% if form.department.help_text %}
-                <div class="form-text">{{ form.department.help_text }}</div>
-            	{% endif %}
-            </div>
+            
 
 
             <div class="mb-5">
@@ -212,7 +214,7 @@
             </div>
 
             <div class="row">
-            	<div class="offset-md-3 col-md-6"><button type="submit" class="btn btn-success w-100">Submit Report</button></div>
+            	<div class="offset-md-3 col-md-6"><button type="submit" class="btn btn-success w-100">{% translate 'Submit Report' %}</button></div>
             </div>
         </form>
         <a href="{% url 'home' %}" class="btn btn-link mt-3">← {% translate 'Back to Home' %}</a>
@@ -229,7 +231,7 @@
 	        return;
 	    }
 
-	    fetch(`/api/check_gang_name/?q=` + encodeURIComponent(query))
+	    fetch(`` + encodeURIComponent(query))
 	        .then(response => response.json())
 	        .then(data => {
 	            if (data.exists) {

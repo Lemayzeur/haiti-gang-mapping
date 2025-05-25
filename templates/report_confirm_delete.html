@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+{% load i18n %}
+
 {% block body %}
 <section class="container py-5">
-    <h2>Delete Report</h2>
-    <p>Are you sure you want to delete the report <strong>{{ report.gang_name }}</strong>?</p>
+    <h2>{% translate 'Delete Report' %}</h2>
+    <p>{% blocktranslate with gang_name=report.gang_name %}Are you sure you want to delete the report <strong>{{ gang_name }}</strong>?{% endblocktranslate %}</p>
     <form method="post">{% csrf_token %}
-        <button type="submit" class="btn btn-danger">Yes, Delete</button>
-        <a href="{% url 'report_detail' report.slug %}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-danger">{% translate 'Yes, Delete' %}</button>
+        <a href="{% url 'report_detail' report.slug %}" class="btn btn-secondary">{% translate 'Cancel' %}</a>
     </form>
 </section>
 {% endblock %}

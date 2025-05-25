@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 23:45-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: core/forms.py:10
+msgid "Baz Pilat, 400 Mawozo..."
+msgstr "Baz Pilat, 400 Mawozo..."
+
+#: core/forms.py:11
+msgid "Delmas 32"
+msgstr "Delmas 32"
+
+#: core/forms.py:12
+msgid "Croix-des-Bouquets, Carrefour, etc."
+msgstr "Croix-des-Bouquets, Carrefour, etc."
+
+#: core/forms.py:13
+msgid "Kidnapping, extortion, drug trafficking..."
+msgstr "Kidnapping, extorsion, trafic de drogue..."
+
+#: core/forms.py:14
+msgid "Mention major attacks, negotiations, etc."
+msgstr "Mentionner les principales attaques, négociations, etc."
+
+#: core/forms.py:15
+msgid "G9, Baz Gran Ravin..."
+msgstr "G9, Baz Gran Ravin..."
+
+#: core/forms.py:16
+msgid "Le Nouvelliste article, RHI report..."
+msgstr "Article du Nouvelliste, rapport RHI..."
+
+#: core/forms.py:17
+msgid "Notes from interviews or observations."
+msgstr "Notes d'entretiens ou observations."
+
+#: core/forms.py:31 templates/report_detail.html:32
+msgid "Yes"
+msgstr "Oui"
+
+#: core/forms.py:31 templates/report_detail.html:34
+msgid "No"
+msgstr "Non"
+
+#: core/models.py:8
+msgid "Ouest"
+msgstr "Ouest"
+
+#: core/models.py:9
+msgid "Artibonite"
+msgstr "Artibonite"
+
+#: core/models.py:10
+msgid "Nord"
+msgstr "Nord"
+
+#: core/models.py:11
+msgid "Centre"
+msgstr "Centre"
+
+#: core/models.py:12
+msgid "Grande-Anse"
+msgstr "Grande-Anse"
+
+#: core/models.py:13
+msgid "Nippes"
+msgstr "Nippes"
+
+#: core/models.py:14
+msgid "Nord-Est"
+msgstr "Nord-Est"
+
+#: core/models.py:15
+msgid "Nord-Ouest"
+msgstr "Nord-Ouest"
+
+#: core/models.py:16
+msgid "Sud"
+msgstr "Sud"
+
+#: core/models.py:17
+msgid "Sud-Est"
+msgstr "Sud-Est"
+
+#: core/models.py:52
+msgid "What is the name of the gang?"
+msgstr "Quel est le nom du gang ?"
+
+#: core/models.py:53
+msgid "If there’s no official name, write the name used locally."
+msgstr "S'il n'y a pas de nom officiel, écrivez le nom utilisé localement."
+
+#: core/models.py:56
+msgid "Is this gang still active?"
+msgstr "Ce gang est-il toujours actif ?"
+
+#: core/models.py:57
+msgid "Check \"Yes\" if the gang is currently operating."
+msgstr "Cochez \"Oui\" si le gang est actuellement actif."
+
+#: core/models.py:61
+msgid "If known, when did this gang begin operating?"
+msgstr "Si connu, quand ce gang a-t-il commencé à opérer ?"
+
+#: core/models.py:62
+msgid "Enter the approximate start date if known."
+msgstr "Entrez la date approximative de début si elle est connue."
+
+#: core/models.py:66
+msgid "If known, when did this gang stop operating?"
+msgstr "Si connu, quand ce gang a-t-il cessé ses activités ?"
+
+#: core/models.py:67 core/models.py:137
+msgid "Leave blank if the gang is still active or the date is unknown."
+msgstr "Laissez vide si le gang est toujours actif ou si la date est inconnue."
+
+#: core/models.py:71
+msgid "Main neighborhood or area where this gang operates/operated?"
+msgstr "Quartier ou zone principale où ce gang opère/opérait ?"
+
+#: core/models.py:72
+msgid "(e.g., Cité Soleil, Martissant, Delmas 32, etc.)"
+msgstr "(ex. : Cité Soleil, Martissant, Delmas 32, etc.)"
+
+#: core/models.py:82
+msgid "Which department does this location belong to?"
+msgstr "À quel département appartient cet emplacement ?"
+
+#: core/models.py:83
+msgid "Select the department where the gang is/was most active."
+msgstr "Sélectionnez le département où le gang est/était le plus actif."
+
+#: core/models.py:86
+msgid "What kind of activities is/was the gang involved in?"
+msgstr "Dans quel type d'activités ce gang est/était impliqué ?"
+
+#: core/models.py:87
+msgid ""
+"Be as specific as possible. (e.g., kidnappings, drug trafficking, extortion)"
+msgstr ""
+"Soyez aussi précis que possible. (ex. : enlèvements, trafic de drogue, "
+"extorsion)"
+
+#: core/models.py:91
+msgid "Describe the activities or key events involving this gang."
+msgstr "Décrivez les activités ou événements clés impliquant ce gang."
+
+#: core/models.py:92
+msgid "Optional. Add any context or background details."
+msgstr "Optionnel. Ajoutez des détails contextuels ou de fond."
+
+#: core/models.py:96
+msgid "Do you know of any rival gangs in the same area?"
+msgstr "Connaissez-vous des gangs rivaux dans la même zone ?"
+
+#: core/models.py:97
+msgid "List known rival gangs, if any."
+msgstr "Listez les gangs rivaux connus, le cas échéant."
+
+#: core/models.py:101
+msgid "Sources or references (if applicable):"
+msgstr "Sources ou références (si applicable) :"
+
+#: core/models.py:102
+msgid "(e.g., news report, local knowledge, eyewitness account, etc.)"
+msgstr "(ex. : article de presse, connaissance locale, témoignage, etc.)"
+
+#: core/models.py:106
+msgid "Some Comments"
+msgstr "Des Commentaires"
+
+#: core/models.py:107
+msgid "Any additional comments or observations?"
+msgstr "Des commentaires ou observations supplémentaires ?"
+
+#: core/models.py:112
+msgid "Validated for public display?"
+msgstr "Validé pour affichage public ?"
+
+#: core/models.py:113
+msgid "Mark this report as validated before it appears on the website."
+msgstr ""
+"Marquez ce rapport comme validé avant qu'il apparaisse sur le site web."
+
+#: core/models.py:122
+msgid "Parent report"
+msgstr "Rapport parent"
+
+#: core/models.py:123
+msgid "If this is an edit, link to the original report."
+msgstr "Si c'est une modification, liez au rapport original."
+
+#: core/models.py:132
+msgid "Area name"
+msgstr "Nom de la zone"
+
+#: core/models.py:133
+msgid "Date taken by the gang"
+msgstr "Date de prise de contrôle par le gang"
+
+#: core/models.py:136
+msgid "If known, when did this gang stop operating in this area?"
+msgstr "Si connu, quand ce gang a-t-il cessé ses activités dans cette zone ?"
+
+#: core/models.py:139
+msgid "Other relevant details about this area"
+msgstr "Autres détails pertinents sur cette zone"
+
+#: core/models.py:142
+msgid "Extra Area"
+msgstr "Zone supplémentaire"
+
+#: core/models.py:143
+msgid "Extra Areas"
+msgstr "Zones supplémentaires"
+
+#: geogang/settings.py:149
+msgid "English"
+msgstr "Anglais"
+
+#: geogang/settings.py:150
+msgid "French"
+msgstr "Français"
+
+#: geogang/settings.py:151
+msgid "Haitian Creole"
+msgstr "Créole haïtien"
+
+#: templates/base.html:7
+msgid "Haiti Gang Mapping"
+msgstr "Cartographie des gangs en Haïti"
+
+#: templates/home.html:10
+msgid "Haiti Gang Mapping Project"
+msgstr "Projet de cartographie des gangs en Haïti"
+
+#: templates/home.html:12
+msgid ""
+"This survey is part of a research project to map the evolution of gang-"
+"controlled zones across Haiti."
+msgstr ""
+"Cette enquête fait partie d'un projet de recherche visant à cartographier "
+"l'évolution des zones contrôlées par les gangs en Haïti."
+
+#: templates/home.html:15
+msgid ""
+"Your contribution will help us build a clearer picture of how these zones "
+"have evolved over time. Please provide accurate and respectful information.\n"
+"            Your safety and privacy are our top priorities — do not share "
+"personal details unless comfortable."
+msgstr ""
+"Votre contribution nous aidera à dresser un tableau plus précis de "
+"l'évolution de ces zones au fil du temps. Veuillez fournir des informations "
+"exactes et respectueuses.\n"
+"Votre sécurité et votre confidentialité sont nos priorités absolues — ne "
+"partagez pas de détails personnels à moins d'être à l'aise."
+
+#: templates/home.html:18
+msgid "Submit Gang Report"
+msgstr "Soumettre un rapport de gang"
+
+#: templates/home.html:26
+msgid "Already Reported Gangs"
+msgstr "Gangs déjà signalés"
+
+#: templates/home.html:34
+msgid "Status:"
+msgstr "Statut :"
+
+#: templates/home.html:35 templates/report_detail.html:10
+msgid "Department:"
+msgstr "Département :"
+
+#: templates/home.html:36
+msgid "Main Area:"
+msgstr "Zone principale :"
+
+#: templates/home.html:42 templates/report_detail.html:96
+msgid "Edit"
+msgstr "Modifier"
+
+#: templates/home.html:46 templates/report_detail.html:100
+msgid "Delete"
+msgstr "Supprimer"
+
+#: templates/home.html:55
+msgid "No gang reports submitted yet."
+msgstr "Aucun rapport de gang soumis pour le moment."
+
+#: templates/report.html:18 templates/report.html:220
+#: templates/report_detail.html:6 templates/report_detail.html:105
+#: templates/report_success.html:13 templates/reports_list.html:34
+msgid "Back to Home"
+msgstr "Retour à l'accueil"
+
+#: templates/report.html:19
+msgid "Gang Activity Report Form"
+msgstr "Formulaire de rapport d'activité des gangs"
+
+#: templates/report.html:100
+msgid "Select a department"
+msgstr "Sélectionnez un département"
+
+#: templates/report.html:113
+msgid "Additional places this gang controls or used to control (if any):"
+msgstr "Autres lieux que ce gang contrôle ou contrôlait (le cas échéant) :"
+
+#: templates/report.html:165
+msgid "Add Another Area"
+msgstr "Ajouter une autre zone"
+
+#: templates/report.html:217
+msgid "Submit Report"
+msgstr "Soumettre le rapport"
+
+#: templates/report_confirm_delete.html:6
+msgid "Delete Report"
+msgstr "Supprimer le rapport"
+
+#: templates/report_confirm_delete.html:7
+#, python-format
+msgid ""
+"Are you sure you want to delete the report <strong>%(gang_name)s</strong>?"
+msgstr ""
+"Êtes-vous sûr de vouloir supprimer le rapport <strong>%(gang_name)s</"
+"strong> ?"
+
+#: templates/report_confirm_delete.html:9
+msgid "Yes, Delete"
+msgstr "Oui, supprimer"
+
+#: templates/report_confirm_delete.html:10
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/report_detail.html:14
+msgid "Main Area of Operation:"
+msgstr "Zone principale d'opération :"
+
+#: templates/report_detail.html:19
+msgid "Start Date:"
+msgstr "Date de début :"
+
+#: templates/report_detail.html:25
+msgid "End Date:"
+msgstr "Date de fin :"
+
+#: templates/report_detail.html:30
+msgid "Is Active:"
+msgstr "Est actif :"
+
+#: templates/report_detail.html:40
+msgid "Additional Areas"
+msgstr "Zones supplémentaires"
+
+#: templates/report_detail.html:47
+msgid "Date taken:"
+msgstr "Date de prise :"
+
+#: templates/report_detail.html:62
+msgid "Activities:"
+msgstr "Activités :"
+
+#: templates/report_detail.html:68
+msgid "Description:"
+msgstr "Description :"
+
+#: templates/report_detail.html:75
+msgid "Rival Gangs:"
+msgstr "Gangs rivaux :"
+
+#: templates/report_detail.html:82
+msgid "Sources:"
+msgstr "Sources :"
+
+#: templates/report_detail.html:89
+msgid "Additional Comments:"
+msgstr "Commentaires supplémentaires :"
+
+#: templates/report_success.html:7
+msgid "Thank you for your report!"
+msgstr "Merci pour votre rapport !"
+
+#: templates/report_success.html:8
+msgid ""
+"Your submission has been received and is pending validation. We appreciate "
+"your contribution to a safer and more informed Haiti."
+msgstr ""
+"Votre soumission a été reçue et est en attente de validation. Nous "
+"apprécions votre contribution pour un Haïti plus sûr et mieux informé."
+
+#: templates/report_success.html:12
+msgid "Submit Another Report"
+msgstr "Soumettre un autre rapport"
+
+#: templates/reports_list.html:5
+msgid "Submitted Gang Reports"
+msgstr "Rapports de gangs soumis"
+
+#: templates/reports_list.html:9
+msgid "Gang Name"
+msgstr "Nom du gang"
+
+#: templates/reports_list.html:10
+msgid "Department"
+msgstr "Département"
+
+#: templates/reports_list.html:11
+msgid "Main Area"
+msgstr "Zone principale"
+
+#: templates/reports_list.html:12
+msgid "Active"
+msgstr "Actif"
+
+#: templates/reports_list.html:13
+msgid "Start Date"
+msgstr "Date de début"
+
+#: templates/reports_list.html:14
+msgid "End Date"
+msgstr "Date de fin"
+
+#: templates/reports_list.html:29
+msgid "No reports submitted yet."
+msgstr "Aucun rapport soumis pour le moment."

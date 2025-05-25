@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block body %}
 <div class="container py-5 text-center">
     <div class="alert alert-success" role="alert">
-        <h1 class="display-6">✅ Thank you for your report!</h1>
-        <p class="lead">Your submission has been received and is pending validation. We appreciate your contribution to a safer and more informed Haiti.</p>
+        <h1 class="display-6">✅ {% blocktranslate %}Thank you for your report!{% endblocktranslate %}</h1>
+        <p class="lead">{% blocktranslate %}Your submission has been received and is pending validation. We appreciate your contribution to a safer and more informed Haiti.{% endblocktranslate %}</p>
     </div>
 
     <div class="mt-4">
-        <a href="{% url 'report' %}" class="btn btn-primary me-2">Submit Another Report</a>
-        <a href="{% url 'home' %}" class="btn btn-outline-secondary">Back to Home</a>
+        <a href="{% url 'report' %}" class="btn btn-primary me-2">{% translate 'Submit Another Report' %}</a>
+        <a href="{% url 'home' %}" class="btn btn-outline-secondary">{% translate 'Back to Home' %}</a>
     </div>
 </div>
 {% endblock %}

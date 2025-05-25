@@ -7,44 +7,44 @@
     <h2 class="mb-4">{{ object.gang_name }}</h2>
 
     <div class="mb-3">
-        <strong>Department:</strong> {{ object.department }}
+        <strong>{% translate 'Department:' %}</strong> {{ object.department }}
     </div>
     
     <div class="mb-3">
-        <strong>Main Area of Operation:</strong> {{ object.main_area }}
+        <strong>{% translate 'Main Area of Operation:' %}</strong> {{ object.main_area }}
     </div>
 
     {% if object.start_date %}
     <div class="mb-3">
-        <strong>Start Date:</strong> {{ object.start_date }}
+        <strong>{% translate 'Start Date:' %}</strong> {{ object.start_date }}
     </div>
     {% endif %}
 
     {% if object.end_date %}
     <div class="mb-3">
-        <strong>End Date:</strong> {{ object.end_date }}
+        <strong>{% translate 'End Date:' %}</strong> {{ object.end_date }}
     </div>
     {% endif %}
 
     <div class="mb-3">
-        <strong>Is Active:</strong>
+        <strong>{% translate 'Is Active:' %}</strong>
         {% if object.is_active %}
-            <span class="badge bg-success">Yes</span>
+            <span class="badge bg-success">{% translate 'Yes' %}</span>
         {% else %}
-            <span class="badge bg-secondary">No</span>
+            <span class="badge bg-secondary">{% translate 'No' %}</span>
         {% endif %}
     </div>
 
     <hr>
 
-    <h5>Additional Areas</h5>
+    <h5>{% translate 'Additional Areas' %}</h5>
     {% if object.extra_areas.exists %}
         <ul class="list-group mb-3">
             {% for area in object.extra_areas.all %}
             <li class="list-group-item">
                 <strong>{{ area.name }}</strong>
                 {% if area.date_taken %}
-                    <br><small class="text-muted">Date taken: {{ area.date_taken }}</small>
+                    <br><small class="text-muted">{% translate 'Date taken:' %} {{ area.date_taken }}</small>
                 {% endif %}
                 {% if area.notes %}
                     <p class="mt-1 mb-0">{{ area.notes }}</p>
@@ -53,51 +53,51 @@
             {% endfor %}
         </ul>
     {% else %}
-        <p class="text-muted">No additional areas reported.</p>
+        <p class="text-muted">No additional areas reported.' %}</p>
     {% endif %}
 
     <hr>
 
     <div class="mb-3">
-        <strong>Activities:</strong>
+        <strong>{% translate 'Activities:' %}</strong>
         <p>{{ object.activities|linebreaks }}</p>
     </div>
 
     {% if object.description %}
     <div class="mb-3">
-        <strong>Description:</strong>
+        <strong>{% translate 'Description:' %}</strong>
         <p>{{ object.description|linebreaks }}</p>
     </div>
     {% endif %}
 
     {% if object.rival_gangs %}
     <div class="mb-3">
-        <strong>Rival Gangs:</strong>
+        <strong>{% translate 'Rival Gangs:' %}</strong>
         <p>{{ object.rival_gangs }}</p>
     </div>
     {% endif %}
 
     {% if object.sources %}
     <div class="mb-3">
-        <strong>Sources:</strong>
+        <strong>{% translate 'Sources:' %}</strong>
         <p>{{ object.sources|linebreaks }}</p>
     </div>
     {% endif %}
 
     {% if object.comments %}
     <div class="mb-3">
-        <strong>Additional Comments:</strong>
+        <strong>{% translate 'Additional Comments:' %}</strong>
         <p>{{ object.comments|linebreaks }}</p>
     </div>
     {% endif %}
 
     <div class="mb-3">
         <a href="{% url 'report_edit' report.slug %}" class="btn btn-warning">
-            <i class="bi bi-pencil-square"></i> Edit
+            <i class="bi bi-pencil-square"></i> {% translate 'Edit' %}
         </a>
 
         <a href="{% url 'report_delete' report.slug %}" class="btn btn-danger">
-            <i class="bi bi-trash"></i> Delete
+            <i class="bi bi-trash"></i> {% translate 'Delete' %}
         </a>
     </div>
 

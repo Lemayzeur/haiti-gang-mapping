@@ -103,6 +103,7 @@ class GangReport(models.Model):
     )
     comments = models.TextField(
         blank=True,
+        verbose_name=_('Some Comments'),
         help_text=_('Any additional comments or observations?'),
     )
 

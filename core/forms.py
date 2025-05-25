@@ -28,7 +28,7 @@ class GangReportForm(forms.ModelForm):
         widgets = {
             'start_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'MM/DD/YYYY'}),
             'end_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'MM/DD/YYYY'}),
-            'is_active': forms.RadioSelect(choices=[(True, 'Yes'), (False, 'No')]),
+            'is_active': forms.RadioSelect(choices=[(True, _('Yes')), (False, _('No'))]),
         }
 
 

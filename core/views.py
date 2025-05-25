@@ -1,9 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.views.generic import (
     TemplateView, FormView, 
     ListView, DetailView,
     UpdateView, DeleteView,
 )
+from django.http import JsonResponse
+from django.utils import translation
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.conf import settings
@@ -143,3 +145,22 @@ class GangReportDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('home')
     login_url = settings.ADMINISTRATION_URL + 'login'
     redirect_field_name = 'next'
+
+def change_language(request):
+    lang = request.POST.get('language')
+    next_url = request.POST.get('next', request.GET.get('next'))
+
+    if lang in dict(settings.LANGUAGES):
+        request.session[settings.LANGUAGE_COOKIE_NAME] = lang
+        translation.activate(lang)
+
+        response = HttpResponseRedirect(next_url)
+        response.set_cookie(
+            settings.LANGUAGE_COOKIE_NAME, lang,
+            max_age=settings.LANGUAGE_COOKIE_AGE,
+            path=settings.LANGUAGE_COOKIE_PATH,
+            domain=settings.LANGUAGE_COOKIE_DOMAIN,
+        )
+
+        return response
+    return redirect('home')
