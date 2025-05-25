@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+<section>
+	<h2 class="mb-4">Submitted Gang Reports</h2>
+	<table class="table table-bordered">
+	    <thead>
+	        <tr>
+	            <th>Gang Name</th>
+	            <th>Department</th>
+	            <th>Main Area</th>
+	            <th>Active</th>
+	            <th>Start Date</th>
+	            <th>End Date</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        {% for report in reports %}
+	        <tr>
+	            <td>{{ report.gang_name }}</td>
+	            <td>{{ report.department }}</td>
+	            <td>{{ report.main_area }}</td>
+	            <td>{{ report.is_active }}</td>
+	            <td>{{ report.start_date }}</td>
+	            <td>{{ report.end_date }}</td>
+	        </tr>
+	        {% empty %}
+	        <tr>
+	            <td colspan="6" class="text-center">No reports submitted yet.</td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+	<a href="{% url 'home' %}" class="btn btn-link mt-3">Back to Home</a>
+</section>

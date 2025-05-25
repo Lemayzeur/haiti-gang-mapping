@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+{% load custom_tags i18n %}
+
+{% block body %}
+<style>
+    .form-section {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    label {
+    	font-weight: bold;
+    }
+</style>
+<section>
+	{{form.errors}}
+    <div class="form-section">
+    	<a href="{% url 'home' %}" class="btn btn-link mb-3">← {% translate 'Back to Home' %}</a>
+        <h2 class="mb-4">{% translate 'Gang Activity Report Form' %}</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="mb-5">
+                <label for="id_gang_name" class="form-label">{{form.gang_name.label}} {% if form.gang_name.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                {{ form.gang_name|add_class:"form-control" }}
+                <div id="gangSuggestions" class="form-text text-muted"></div>
+                {% if form.gang_name.help_text %}
+                <div class="form-text">{{ form.gang_name.help_text }}</div>
+            	{% endif %}
+            </div>
+
+            <div class="mb-5">
+			    <label class="form-label d-block">{{form.is_active.label}} {% if form.is_active.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+			    {% for radio in form.is_active %}
+			    <span class="me-3">{{ radio }}</span>
+			    {% endfor %}
+			    {% if form.is_active.help_text %}
+                <div class="form-text">{{ form.is_active.help_text }}</div>
+            	{% endif %}
+			</div>
+
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <label for="id_start_date" class="form-label">{{form.start_date.label}} {% if form.start_date.field.required %}
+                    <span class="text-danger">*</span>
+                	{% endif %}</label>
+
+                	<div class="input-group">
+                    	{{ form.start_date|add_class:"form-control flatpickr" }}
+                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#id_start_date">
+			                <i class="bi bi-calendar3"></i>
+			            </button>
+			        </div>
+
+
+                    {% if form.start_date.help_text %}
+	                <div class="form-text">{{ form.start_date.help_text }}</div>
+	            	{% endif %}
+                </div>
+                <div class="col-md-6 mb-5">
+                    <label for="id_end_date" class="form-label">{{form.end_date.label}} {% if form.end_date.field.required %}
+                    <span class="text-danger">*</span>
+                	{% endif %}</label>
+
+
+                	<div class="input-group">
+                    	{{ form.end_date|add_class:"form-control flatpickr" }}
+                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#id_end_date">
+			                <i class="bi bi-calendar3"></i>
+			            </button>
+			        </div>
+                    
+
+                   	{% if form.end_date.help_text %}
+	                <div class="form-text">{{ form.end_date.help_text }}</div>
+	            	{% endif %}
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <label for="id_main_area" class="form-label">{{form.main_area.label}} {% if form.main_area.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                {{ form.main_area|add_class:"form-control" }}
+                {% if form.main_area.help_text %}
+                <div class="form-text">{{ form.main_area.help_text }}</div>
+            	{% endif %}
+            </div>
+
+			<div class="mb-5">
+                <label for="id_extra_areas" class="form-label">{% blocktranslate %}Additional places this gang controls or used to control (if any):{% endblocktranslate %}</label>
+				<div id="extra-areas-formset">
+				    {{ extraarea_formset.management_form }}
+				    {% for form in extraarea_formset %}
+				    {{form.errors}}
+				        <div class="formset-row border p-3 mb-3">
+				        	{{ form.id }}
+				            {{ form.name.label_tag }} {{ form.name|add_class:"form-control" }}
+
+				            <div class="row">
+				                <div class="col-md-6">
+				                    <label for="{{form.date_taken.id_for_label}}" class="form-label">{{form.date_taken.label_tag}} {% if form.date_taken.field.required %}
+				                    <span class="text-danger">*</span>
+				                {% endif %}</label>
+				                    
+
+				                    <div class="input-group">
+				                    	{{ form.date_taken|add_class:"form-control flatpickr" }}
+				                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#{{form.date_taken.id_for_label}}">
+							                <i class="bi bi-calendar3"></i>
+							            </button>
+							        </div>
+
+				                    {% if form.date_taken.help_text %}
+					                <div class="form-text">{{ form.date_taken.help_text }}</div>
+					            	{% endif %}
+				                </div>
+				                <div class="col-md-6">
+				                    <label for="{{form.end_date.id_for_label}}" class="form-label">{{form.end_date.label_tag}} {% if form.end_date.field.required %}
+				                    <span class="text-danger">*</span>
+				                	{% endif %}</label>
+				                    
+
+				                    <div class="input-group">
+				                    	{{ form.end_date|add_class:"form-control flatpickr" }}
+				                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#{{form.end_date.id_for_label}}">
+							                <i class="bi bi-calendar3"></i>
+							            </button>
+							        </div>
+
+				                   	{% if form.end_date.help_text %}
+					                <div class="form-text">{{ form.end_date.help_text }}</div>
+					            	{% endif %}
+				                </div>
+				            </div>
+
+
+
+				            <button type="button" class="btn btn-danger btn-sm remove-form">X</button>
+				        </div>
+				    {% endfor %}
+				</div>
+				<button type="button" class="btn btn-secondary btn-sm" id="add-more">+ Add Another Area</button>
+			</div>
+
+
+            <div class="mb-5">
+                <label for="id_department" class="form-label">{{form.department.label}} {% if form.department.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                 <select name="{{ form.department.name }}" id="{{ form.department.id_for_label }}"
+            class="form-select" required>
+                    <option selected disabled>{% translate 'Select a department' %}</option>
+                    {% for val, name in form.department.field.choices %}
+                    {% if val %}
+                    <option value="{{ val }}" {% if form.department.value == val %}selected{% endif %}>{{ name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                {% if form.department.help_text %}
+                <div class="form-text">{{ form.department.help_text }}</div>
+            	{% endif %}
+            </div>
+
+
+            <div class="mb-5">
+                <label for="id_activities" class="form-label">{{form.activities.label}} {% if form.activities.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                {{ form.activities|add_class:"form-control" }}
+                {% if form.activities.help_text %}
+                <div class="form-text">{{ form.activities.help_text }}</div>
+            	{% endif %}
+            </div>
+
+
+            <div class="mb-5">
+                <label for="id_rival_gangs" class="form-label">{{form.rival_gangs.label}} {% if form.rival_gangs.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                {{ form.rival_gangs|add_class:"form-control" }}
+                {% if form.rival_gangs.help_text %}
+                <div class="form-text">{{ form.rival_gangs.help_text }}</div>
+            	{% endif %}
+            </div>
+
+            <div class="mb-5">
+                <label for="id_sources" class="form-label">{{form.sources.label}} {% if form.sources.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                {{ form.sources|add_class:"form-control" }}
+
+                {% if form.sources.help_text %}
+                <div class="form-text">{{ form.sources.help_text }}</div>
+            	{% endif %}
+            </div>
+
+
+            <div class="mb-5">
+                <label for="id_comments" class="form-label">{{form.comments.label}} {% if form.comments.field.required %}
+                    <span class="text-danger">*</span>
+                {% endif %}</label>
+                {{ form.comments|add_class:"form-control" }}
+
+                {% if form.comments.help_text %}
+                <div class="form-text">{{ form.comments.help_text }}</div>
+            	{% endif %}
+            </div>
+
+            <div class="row">
+            	<div class="offset-md-3 col-md-6"><button type="submit" class="btn btn-success w-100">Submit Report</button></div>
+            </div>
+        </form>
+        <a href="{% url 'home' %}" class="btn btn-link mt-3">← {% translate 'Back to Home' %}</a>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block script %}
+<script>
+	function checkGangName(query) {
+	    if (query.length < 2) {
+	        document.getElementById("gangSuggestions").innerText = '';
+	        return;
+	    }
+
+	    fetch(`/api/check_gang_name/?q=` + encodeURIComponent(query))
+	        .then(response => response.json())
+	        .then(data => {
+	            if (data.exists) {
+	                document.getElementById("gangSuggestions").innerText = "This gang may already be reported. Consider updating instead.";
+	            } else {
+	                document.getElementById("gangSuggestions").innerText = "";
+	            }
+	        });
+	}
+
+	// altFormat: "F j, Y",
+  	flatpickr(".flatpickr", {
+	    altInput: true,
+	    allowInput: true,
+	    altFormat: "d/m/Y",
+	    dateFormat: "Y-m-d",
+	    maxDate: "today"
+  	});
+
+
+  	document.querySelectorAll('.trigger-flatpickr').forEach(button => {
+        button.addEventListener('click', function () {
+            const input = document.querySelector(this.dataset.target);
+            if (input._flatpickr) {
+                input._flatpickr.open();
+            }
+        });
+	});
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let formIdx = {{ extraarea_formset.total_form_count }};
+
+    function initFlatpickrForElement(el) {
+        // flatpickr(el, {
+        //     altInput: true,
+        // allowInput: true.
+		//     altFormat: "d/m/Y",
+		//     dateFormat: "Y-m-d",
+		//     maxDate: "today"
+        // });
+    }
+
+    function reinitFlatpickr(container) {
+        container.querySelectorAll('.flatpickr').forEach(el => {
+        	console.log(el)
+            initFlatpickrForElement(el);
+        });
+    }
+
+    document.getElementById('add-more').addEventListener('click', function() {
+        const newForm = document.querySelectorAll('.formset-row')[0].cloneNode(true);
+        newForm.querySelectorAll('input, textarea').forEach(el => {
+            el.name = el.name.replace(/\d+/, formIdx);
+            el.id = el.id.replace(/\d+/, formIdx);
+            el.value = '';
+        });
+
+
+        newForm.querySelectorAll('.is-invalid, .text-danger').forEach(el => el.remove());
+        newForm.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
+
+
+        document.getElementById('extra-areas-formset').appendChild(newForm);
+        document.getElementById('id_extra_areas-TOTAL_FORMS').value = ++formIdx;
+
+
+        reinitFlatpickr(newForm);
+    });
+
+    document.getElementById('extra-areas-formset').addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove-form')) {
+        	const moreThanOne = document.getElementById('extra-areas-formset').querySelectorAll('.formset-row').length > 1;
+            if(moreThanOne === true) {
+            	formIdx--;
+            	e.target.closest('.formset-row').remove();
+            	document.getElementById('id_extra_areas-TOTAL_FORMS').value = formIdx;
+            }
+        }
+    });
+});
+</script>
+
+{% endblock %}
