@@ -1,21 +1,49 @@
-{% load i18n %}
+{% load i18n static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE|default:'en' }}">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% blocktranslate %}Haiti Gang Mapping{% endblocktranslate %}</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>{% block title %}{% blocktranslate %}Haiti Gang Mapping{% endblocktranslate %}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% blocktranslate %}This survey is part of a research project to map the evolution of gang-controlled zones across Haiti.{% endblocktranslate%}{% endblock %}">
+    <meta name="keywords" content="Haiti, Gang Mapping, Security, Gangs, Data, Research, Timeline, Crime Map">
+    <meta name="author" content="Ayiti Data">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:title" content="{% block og_title %}{% blocktranslate %}Haiti Gang Mapping{% endblocktranslate %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% blocktranslate %}This survey is part of a research project to map the evolution of gang-controlled zones across Haiti.{% endblocktranslate%}{% endblock %}">
+    <meta property="og:image" content="{% static 'images/card.png' %}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{% blocktranslate %}Haiti Gang Mapping{% endblocktranslate %}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{% blocktranslate %}This survey is part of a research project to map the evolution of gang-controlled zones across Haiti.{% endblocktranslate%}{% endblock %}">
+    <meta name="twitter:image" content="{% static 'images/card.png' %}">
+
+    <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Favicon with Emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇭🇹</text></svg>">
 </head>
+
 <body>
     <div class="container mt-5">
         {% block body %}{% endblock %}
     </div>
 
-
+    <!-- Language Switcher -->
     <form method="POST" action="{% url 'change_language' %}" class="language-switcher" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ request.path }}">
@@ -30,9 +58,7 @@
         </select>
     </form>
 
-
-
-    <!-- Flatpickr JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     {% block script %}{% endblock %}
 </body>

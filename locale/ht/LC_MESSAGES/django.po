@@ -241,11 +241,11 @@ msgstr "Kreyòl Ayisyen"
 
 #: templates/base.html:7
 msgid "Haiti Gang Mapping"
-msgstr "Kat jeyografik gang Ayiti"
+msgstr "Kat Jewografik Gang Ayiti"
 
 #: templates/home.html:10
 msgid "Haiti Gang Mapping Project"
-msgstr "Pwojè kat jeyografik gang Ayiti"
+msgstr "Pwojè Kat Jewografik Gang Ayiti"
 
 #: templates/home.html:12
 msgid ""

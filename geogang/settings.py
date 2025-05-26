@@ -128,6 +128,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 if DEBUG:
     STATIC_ROOT = BASE_DIR / 'prod_static'
 
@@ -163,7 +167,7 @@ EXTRA_LANG_INFO = {
 }
 locale.LANG_INFO = dict(locale.LANG_INFO, **EXTRA_LANG_INFO)
 
-LANGUAGE_CODE = 'es'
+LANGUAGE_CODE = 'ht'
 
 LANGUAGE_COOKIE_NAME = '_lg'
 
