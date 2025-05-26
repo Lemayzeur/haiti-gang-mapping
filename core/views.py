@@ -78,7 +78,7 @@ class GangReportFormView(FormView):
             formset.instance = self.object
             formset.save()
 
-            send_report_email(report)
+            send_report_email(self.object)
 
             return super().form_valid(form)
         else:
