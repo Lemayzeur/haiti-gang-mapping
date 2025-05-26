@@ -46,8 +46,8 @@
                 {% if area.date_taken %}
                     <br><small class="text-muted">{% translate 'Date taken:' %} {{ area.date_taken }}</small>
                 {% endif %}
-                {% if area.notes %}
-                    <p class="mt-1 mb-0">{{ area.notes }}</p>
+                {% if area.end_date %}
+                    <br><small class="text-muted">{% translate 'End Date:' %} {{ area.end_date }}</small>
                 {% endif %}
             </li>
             {% endfor %}

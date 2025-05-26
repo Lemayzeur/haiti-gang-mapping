@@ -106,7 +106,7 @@ class GangReportDetailView(LoginRequiredMixin, DetailView):
 
 class GangReportUpdateView(LoginRequiredMixin, UpdateView):
     model = GangReport
-    form_class = GangReportForm
+    form_class = GangReportForm 
     template_name = 'report.html' 
     context_object_name = 'report'
     login_url = settings.ADMINISTRATION_URL + 'login'
@@ -118,6 +118,8 @@ class GangReportUpdateView(LoginRequiredMixin, UpdateView):
             context['extraarea_formset'] = ExtraAreaFormSet(self.request.POST, instance=self.object)
         else:
             context['extraarea_formset'] = ExtraAreaFormSet(instance=self.object)
+
+        context['extraarea_formset'].extra = 0
         return context
 
     def get_success_url(self):
@@ -130,6 +132,7 @@ class GangReportUpdateView(LoginRequiredMixin, UpdateView):
             self.object = form.save()
             formset.instance = self.object
             formset.save()
+
             return redirect(self.get_success_url())
         else:
             return self.form_invalid(form)

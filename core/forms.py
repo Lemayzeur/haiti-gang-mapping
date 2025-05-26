@@ -22,24 +22,48 @@ class GangReportForm(forms.ModelForm):
                 self.fields[field_name].widget.attrs.update({
                     'placeholder': placeholder
                 })
+
+        date_format = ['%d/%m/%Y']
+        self.fields['start_date'].input_formats = date_format
+        self.fields['end_date'].input_formats = date_format
+
     class Meta:
         model = GangReport
         fields = '__all__'
         widgets = {
-            'start_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'MM/DD/YYYY'}),
-            'end_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'MM/DD/YYYY'}),
+            'start_date': forms.DateInput(
+                attrs={'type': 'date', 'placeholder': 'DD/MM/YYYY'},
+                format='%d/%m/%Y',
+            ),
+            'end_date': forms.DateInput(
+                attrs={'type': 'date', 'placeholder': 'DD/MM/YYYY'},
+                format='%d/%m/%Y',
+            ),
             'is_active': forms.RadioSelect(choices=[(True, _('Yes')), (False, _('No'))]),
         }
 
 
 
 class ExtraAreaForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        date_format = ['%d/%m/%Y']
+        self.fields['date_taken'].input_formats = date_format
+        self.fields['end_date'].input_formats = date_format
+
     class Meta:
         model = ExtraArea
         fields = ['name', 'date_taken', 'end_date']
         widgets = {
-            'date_taken': forms.DateInput(attrs={'type': 'date', 'placeholder': 'MM/DD/YYYY'}),
-            'end_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'MM/DD/YYYY'}),
+            'date_taken': forms.DateInput(
+                attrs={'type': 'date', 'placeholder': 'DD/MM/YYYY'},
+                format='%d/%m/%Y',
+            ),
+            'end_date': forms.DateInput(
+                attrs={'type': 'date', 'placeholder': 'DD/MM/YYYY'},
+                format='%d/%m/%Y',
+            ),
         }
 
 ExtraAreaFormSet = forms.inlineformset_factory(

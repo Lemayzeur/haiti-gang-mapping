@@ -11,6 +11,10 @@
     label {
     	font-weight: bold;
     }
+
+    input[name$="-DELETE"] {
+        display: none;
+    }
 </style>
 <section>
 	{{form.errors}}
@@ -114,9 +118,9 @@
 				<div id="extra-areas-formset">
 				    {{ extraarea_formset.management_form }}
 				    {% for form in extraarea_formset %}
-				    {{form.errors}}
 				        <div class="formset-row border p-3 mb-3">
 				        	{{ form.id }}
+                            {{ form.DELETE }}
 				            {{ form.name.label_tag }} {{ form.name|add_class:"form-control" }}
 
 				            <div class="row mt-3">
@@ -247,7 +251,7 @@
 	    altInput: true,
 	    allowInput: true,
 	    altFormat: "d/m/Y",
-	    dateFormat: "Y-m-d",
+	    dateFormat: "d/m/Y",
 	    maxDate: "today"
   	});
 
@@ -285,6 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('add-more').addEventListener('click', function() {
         const newForm = document.querySelectorAll('.formset-row')[0].cloneNode(true);
+        newForm.style.display = 'block';
         newForm.querySelectorAll('input, textarea').forEach(el => {
             el.name = el.name.replace(/\d+/, formIdx);
             el.id = el.id.replace(/\d+/, formIdx);
@@ -305,14 +310,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('extra-areas-formset').addEventListener('click', function(e) {
         if (e.target.classList.contains('remove-form')) {
-        	const moreThanOne = document.getElementById('extra-areas-formset').querySelectorAll('.formset-row').length > 1;
-            if(moreThanOne === true) {
-            	formIdx--;
-            	e.target.closest('.formset-row').remove();
-            	document.getElementById('id_extra_areas-TOTAL_FORMS').value = formIdx;
+        	const formRow = e.target.closest('.formset-row');
+            const deleteField = formRow.querySelector('input[name$="-DELETE"]');
+
+            if (deleteField) {
+                deleteField.checked = true;
+                formRow.style.display = 'none';
+            } else {
+                const moreThanOne = document.getElementById('extra-areas-formset').querySelectorAll('.formset-row').length > 1;
+                if (moreThanOne) {
+                    formIdx--;
+                    e.target.closest('.formset-row').remove();
+                    document.getElementById('id_extra_areas-TOTAL_FORMS').value = formIdx;
+                }
             }
         }
     });
+
 });
 </script>
 
