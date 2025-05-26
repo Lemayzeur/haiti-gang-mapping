@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-if DEBUG:
+if not DEBUG:
     STATIC_ROOT = BASE_DIR / 'prod_static'
 
 # Default primary key field type
