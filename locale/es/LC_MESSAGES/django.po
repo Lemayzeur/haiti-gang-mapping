@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-25 00:27-0500\n"
+"POT-Creation-Date: 2025-05-28 18:03-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,45 +19,165 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
 
-#: core/forms.py:10
+#: core/forms.py:8
+msgid "Choose month"
+msgstr "Elige un mes"
+
+#: core/forms.py:12
+msgid "Choose year"
+msgstr "Elige un año"
+
+#: core/forms.py:18
+msgid "Kidnapping"
+msgstr "Secuestro"
+
+#: core/forms.py:19
+msgid "Extortion"
+msgstr "Extorsión"
+
+#: core/forms.py:20
+msgid "Murder"
+msgstr "Asesinato"
+
+#: core/forms.py:21
+msgid "Drug trafficking"
+msgstr "Tráfico de drogas"
+
+#: core/forms.py:22
+msgid "Robbery"
+msgstr "Robo"
+
+#: core/forms.py:23
+msgid "Rape"
+msgstr "Violación"
+
+#: core/forms.py:24
+msgid "Human trafficking"
+msgstr "Trata de personas"
+
+#: core/forms.py:25
+msgid "Armed assaults"
+msgstr "Ataques armados"
+
+#: core/forms.py:26
+msgid "Carjacking"
+msgstr "Robo de vehículos"
+
+#: core/forms.py:27
+msgid "Illegal arms trade"
+msgstr "Comercio ilegal de armas"
+
+#: core/forms.py:28
+msgid "Smuggling"
+msgstr "Contrabando"
+
+#: core/forms.py:29 core/forms.py:42
+msgid "Other"
+msgstr "Otro"
+
+#: core/forms.py:34
+msgid "Social Media"
+msgstr "Redes sociales"
+
+#: core/forms.py:35
+msgid "Word of Mouth"
+msgstr "Boca a boca"
+
+#: core/forms.py:36
+msgid "Newspaper"
+msgstr "Periódico"
+
+#: core/forms.py:37
+msgid "Radio"
+msgstr "Radio"
+
+#: core/forms.py:38
+msgid "TV"
+msgstr "Televisión"
+
+#: core/forms.py:39
+msgid "Government Reports"
+msgstr "Informes gubernamentales"
+
+#: core/forms.py:40
+msgid "NGO & Human Rights Organizations"
+msgstr "ONG y organizaciones de derechos humanos"
+
+#: core/forms.py:41
+msgid "Community Watch Groups"
+msgstr "Grupos de vigilancia comunitaria"
+
+#: core/forms.py:49 core/forms.py:211
+msgid "Start Month"
+msgstr "Mes de inicio"
+
+#: core/forms.py:50 core/forms.py:212
+msgid "Start Year"
+msgstr "Año de inicio"
+
+#: core/forms.py:51 core/forms.py:213
+msgid "End Month"
+msgstr "Mes de finalización"
+
+#: core/forms.py:52 core/forms.py:214
+msgid "End Year"
+msgstr "Año de finalización"
+
+#: core/forms.py:59
+msgid "Gang Activities"
+msgstr "Actividades de pandillas"
+
+#: core/forms.py:63 core/forms.py:75
+msgid "If Other, specify"
+msgstr "Si es otro, especifique"
+
+#: core/forms.py:64
+msgid "Other activity..."
+msgstr "Otra actividad..."
+
+#: core/forms.py:71
+msgid "Sources"
+msgstr "Fuentes"
+
+#: core/forms.py:76
+msgid "Other source..."
+msgstr "Otra fuente..."
+
+#: core/forms.py:83
 msgid "Baz Pilat, 400 Mawozo..."
 msgstr "Baz Pilat, 400 Mawozo..."
 
-#: core/forms.py:11
+#: core/forms.py:84
 msgid "Delmas 32"
 msgstr "Delmas 32"
 
-#: core/forms.py:12
-msgid "Croix-des-Bouquets, Carrefour, etc."
-msgstr "Croix-des-Bouquets, Carrefour, etc."
-
-#: core/forms.py:13
+#: core/forms.py:86
 msgid "Kidnapping, extortion, drug trafficking..."
 msgstr "Secuestro, extorsión, tráfico de drogas..."
 
-#: core/forms.py:14
-msgid "Mention major attacks, negotiations, etc."
-msgstr "Mencionar ataques importantes, negociaciones, etc."
-
-#: core/forms.py:15
+#: core/forms.py:88
 msgid "G9, Baz Gran Ravin..."
 msgstr "G9, Baz Gran Ravin..."
 
-#: core/forms.py:16
-msgid "Le Nouvelliste article, RHI report..."
-msgstr "Artículo de Le Nouvelliste, informe de RHI..."
-
-#: core/forms.py:17
-msgid "Notes from interviews or observations."
-msgstr "Notas de entrevistas u observaciones."
-
-#: core/forms.py:31 templates/report_detail.html:32
+#: core/forms.py:143 templates/report_detail.html:32
 msgid "Yes"
 msgstr "Sí"
 
-#: core/forms.py:31 templates/report_detail.html:34
+#: core/forms.py:143 templates/report_detail.html:34
 msgid "No"
 msgstr "No"
+
+#: core/forms.py:164 core/forms.py:259
+msgid "Invalid start date."
+msgstr "Fecha de inicio inválida."
+
+#: core/forms.py:172 core/forms.py:267
+msgid "Invalid end date."
+msgstr "Fecha de fin inválida."
+
+#: core/forms.py:176 core/forms.py:271
+msgid "Start date must be before or equal to end date."
+msgstr "La fecha de inicio debe ser anterior o igual a la fecha de fin."
 
 #: core/models.py:8
 msgid "Ouest"
@@ -181,11 +301,12 @@ msgstr "Fuentes o referencias (si corresponde):"
 
 #: core/models.py:102
 msgid "(e.g., news report, local knowledge, eyewitness account, etc.)"
-msgstr "(Ej.: informe de noticias, conocimiento local, testimonio presencial, etc.)"
+msgstr ""
+"(Ej.: informe de noticias, conocimiento local, testimonio presencial, etc.)"
 
 #: core/models.py:106
-msgid "Some Comments"
-msgstr "Algunos Comentarios"
+msgid "Some Comments (Optional)"
+msgstr "Algunos comentarios (Opcional)"
 
 #: core/models.py:107
 msgid "Any additional comments or observations?"
@@ -197,7 +318,8 @@ msgstr "¿Validado para exhibición pública?"
 
 #: core/models.py:113
 msgid "Mark this report as validated before it appears on the website."
-msgstr "Marca este informe como validado antes de que aparezca en el sitio web."
+msgstr ""
+"Marca este informe como validado antes de que aparezca en el sitio web."
 
 #: core/models.py:122
 msgid "Parent report"
@@ -231,17 +353,22 @@ msgstr "Área Extra"
 msgid "Extra Areas"
 msgstr "Áreas Extras"
 
-#: templates/base.html:7
+#: templates/base.html:10 templates/base.html:22 templates/base.html:28
 msgid "Haiti Gang Mapping"
 msgstr "Mapa de Pandillas de Haití"
+
+#: templates/base.html:11 templates/base.html:23 templates/base.html:29
+#: templates/home.html:12
+msgid ""
+"This survey is part of a research project to map the evolution of gang-"
+"controlled zones across Haiti."
+msgstr ""
+"Esta encuesta es parte de un proyecto de investigación para mapear la "
+"evolución de las zonas controladas por pandillas en Haití."
 
 #: templates/home.html:10
 msgid "Haiti Gang Mapping Project"
 msgstr "Proyecto de Mapeo de Pandillas de Haití"
-
-#: templates/home.html:12
-msgid "This survey is part of a research project to map the evolution of gang-controlled zones across Haiti."
-msgstr "Esta encuesta es parte de un proyecto de investigación para mapear la evolución de las zonas controladas por pandillas en Haití."
 
 #: templates/home.html:15
 msgid ""
@@ -249,11 +376,16 @@ msgid ""
 "have evolved over time. Please provide accurate and respectful information.\n"
 "            Your safety and privacy are our top priorities — do not share "
 "personal details unless comfortable."
-msgstr "Tu contribución nos ayudará a construir una imagen más clara de cómo han evolucionado estas zonas con el tiempo. Por favor, proporciona información precisa y respetuosa.\nTu seguridad y privacidad son nuestras principales prioridades — no compartas detalles personales a menos que te sientas cómodo."
+msgstr ""
+"Tu contribución nos ayudará a construir una imagen más clara de cómo han "
+"evolucionado estas zonas con el tiempo. Por favor, proporciona información "
+"precisa y respetuosa.\n"
+"Tu seguridad y privacidad son nuestras principales prioridades — no "
+"compartas detalles personales a menos que te sientas cómodo."
 
 #: templates/home.html:18
-msgid "Submit Gang Report"
-msgstr "Enviar Informe de Pandillas"
+msgid "Start Now"
+msgstr "Comenzar ahora"
 
 #: templates/home.html:26
 msgid "Already Reported Gangs"
@@ -279,36 +411,39 @@ msgstr "Editar"
 msgid "Delete"
 msgstr "Eliminar"
 
-
 #: templates/home.html:55
 msgid "No gang reports submitted yet."
 msgstr "No se han presentado informes de pandillas aún."
 
-#: templates/report.html:18 templates/report.html:220
+#: templates/report.html:22 templates/report.html:254
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
 msgstr "Volver a Inicio"
 
-#: templates/report.html:19
+#: templates/report.html:23
 msgid "Gang Activity Report Form"
 msgstr "Formulario de Informe de Actividad de Pandillas"
 
-#: templates/report.html:100
+#: templates/report.html:107
 msgid "Select a department"
 msgstr "Seleccionar un departamento"
 
-#: templates/report.html:113
+#: templates/report.html:120
 msgid "Additional places this gang controls or used to control (if any):"
 msgstr ""
 "Lugares adicionales que esta pandilla controla o solía controlar (si los "
 "hay):"
 
-#: templates/report.html:165
+#: templates/report.html:175
 msgid "Add Another Area"
 msgstr "Agregar Otra Área"
 
-#: templates/report.html:217
+#: templates/report.html:187 templates/report.html:220
+msgid "Select all that apply"
+msgstr "Seleccione todas las opciones que correspondan"
+
+#: templates/report.html:251
 msgid "Submit Report"
 msgstr "Enviar Informe"
 
@@ -340,7 +475,7 @@ msgstr "Área Principal de Operación:"
 msgid "Start Date:"
 msgstr "Fecha de Inicio:"
 
-#: templates/report_detail.html:25
+#: templates/report_detail.html:25 templates/report_detail.html:50
 msgid "End Date:"
 msgstr "Fecha de Fin:"
 
@@ -423,3 +558,18 @@ msgstr "Fecha de Fin"
 #: templates/reports_list.html:29
 msgid "No reports submitted yet."
 msgstr "Aún no se han presentado informes."
+
+#~ msgid "Mention major attacks, negotiations, etc."
+#~ msgstr "Mencionar ataques importantes, negociaciones, etc."
+
+#~ msgid "Le Nouvelliste article, RHI report..."
+#~ msgstr "Artículo de Le Nouvelliste, informe de RHI..."
+
+#~ msgid "Notes from interviews or observations."
+#~ msgstr "Notas de entrevistas u observaciones."
+
+#~ msgid "Croix-des-Bouquets, Carrefour, etc."
+#~ msgstr "Croix-des-Bouquets, Carrefour, etc."
+
+#~ msgid "Submit Gang Report"
+#~ msgstr "Enviar Informe de Pandillas"

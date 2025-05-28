@@ -184,7 +184,7 @@
                     <span class="text-danger">*</span>
                 {% endif %}</label>
 
-
+                <div class="form-text">{% translate 'Select all that apply' %}</div>
                 {% for checkbox in form.activities %}
                     <div class="ms-1">
                         {{ checkbox.tag }}
@@ -217,7 +217,7 @@
                     <span class="text-danger">*</span>
                 {% endif %}</label>
 
-
+                <div class="form-text">{% translate 'Select all that apply' %}</div>
                 {% for checkbox in form.sources %}
                     <div class="ms-1">
                         {{ checkbox.tag }}
@@ -238,11 +238,13 @@
                 <label for="id_comments" class="form-label">{{form.comments.label}} {% if form.comments.field.required %}
                     <span class="text-danger">*</span>
                 {% endif %}</label>
-                {{ form.comments|add_class:"form-control" }}
 
                 {% if form.comments.help_text %}
                 <div class="form-text">{{ form.comments.help_text }}</div>
-            	{% endif %}
+                {% endif %}
+                {{ form.comments|add_class:"form-control" }}
+
+                
             </div>
 
             <div class="row">

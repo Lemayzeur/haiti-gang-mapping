@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 23:45-0500\n"
+"POT-Creation-Date: 2025-05-28 18:03-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,45 +18,165 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: core/forms.py:10
+#: core/forms.py:8
+msgid "Choose month"
+msgstr "Choisissez un mois"
+
+#: core/forms.py:12
+msgid "Choose year"
+msgstr "Choisissez une année"
+
+#: core/forms.py:18
+msgid "Kidnapping"
+msgstr "Kidnapping"
+
+#: core/forms.py:19
+msgid "Extortion"
+msgstr "Extorsion"
+
+#: core/forms.py:20
+msgid "Murder"
+msgstr "Meurtre"
+
+#: core/forms.py:21
+msgid "Drug trafficking"
+msgstr "Trafic de drogue"
+
+#: core/forms.py:22
+msgid "Robbery"
+msgstr "Vol"
+
+#: core/forms.py:23
+msgid "Rape"
+msgstr "Viol"
+
+#: core/forms.py:24
+msgid "Human trafficking"
+msgstr "Trafic d'êtres humains"
+
+#: core/forms.py:25
+msgid "Armed assaults"
+msgstr "Attaques armées"
+
+#: core/forms.py:26
+msgid "Carjacking"
+msgstr "Vol de voiture"
+
+#: core/forms.py:27
+msgid "Illegal arms trade"
+msgstr "Commerce illégal d’armes"
+
+#: core/forms.py:28
+msgid "Smuggling"
+msgstr "Contrebande"
+
+#: core/forms.py:29 core/forms.py:42
+msgid "Other"
+msgstr "Autre"
+
+#: core/forms.py:34
+msgid "Social Media"
+msgstr "Réseaux sociaux"
+
+#: core/forms.py:35
+msgid "Word of Mouth"
+msgstr "Bouche-à-oreille"
+
+#: core/forms.py:36
+msgid "Newspaper"
+msgstr "Journal"
+
+#: core/forms.py:37
+msgid "Radio"
+msgstr "Radio"
+
+#: core/forms.py:38
+msgid "TV"
+msgstr "Télévision"
+
+#: core/forms.py:39
+msgid "Government Reports"
+msgstr "Rapports gouvernementaux"
+
+#: core/forms.py:40
+msgid "NGO & Human Rights Organizations"
+msgstr "ONG et organisations de défense des droits humains"
+
+#: core/forms.py:41
+msgid "Community Watch Groups"
+msgstr "Groupes de surveillance communautaire"
+
+#: core/forms.py:49 core/forms.py:211
+msgid "Start Month"
+msgstr "Mois de début"
+
+#: core/forms.py:50 core/forms.py:212
+msgid "Start Year"
+msgstr "Année de début"
+
+#: core/forms.py:51 core/forms.py:213
+msgid "End Month"
+msgstr "Mois de fin"
+
+#: core/forms.py:52 core/forms.py:214
+msgid "End Year"
+msgstr "Année de fin"
+
+#: core/forms.py:59
+msgid "Gang Activities"
+msgstr "Activités des gangs"
+
+#: core/forms.py:63 core/forms.py:75
+msgid "If Other, specify"
+msgstr "Si autre, précisez"
+
+#: core/forms.py:64
+msgid "Other activity..."
+msgstr "Autre activité..."
+
+#: core/forms.py:71
+msgid "Sources"
+msgstr "Sources"
+
+#: core/forms.py:76
+msgid "Other source..."
+msgstr "Autre source..."
+
+#: core/forms.py:83
 msgid "Baz Pilat, 400 Mawozo..."
 msgstr "Baz Pilat, 400 Mawozo..."
 
-#: core/forms.py:11
+#: core/forms.py:84
 msgid "Delmas 32"
 msgstr "Delmas 32"
 
-#: core/forms.py:12
-msgid "Croix-des-Bouquets, Carrefour, etc."
-msgstr "Croix-des-Bouquets, Carrefour, etc."
-
-#: core/forms.py:13
+#: core/forms.py:86
 msgid "Kidnapping, extortion, drug trafficking..."
 msgstr "Kidnapping, extorsion, trafic de drogue..."
 
-#: core/forms.py:14
-msgid "Mention major attacks, negotiations, etc."
-msgstr "Mentionner les principales attaques, négociations, etc."
-
-#: core/forms.py:15
+#: core/forms.py:88
 msgid "G9, Baz Gran Ravin..."
 msgstr "G9, Baz Gran Ravin..."
 
-#: core/forms.py:16
-msgid "Le Nouvelliste article, RHI report..."
-msgstr "Article du Nouvelliste, rapport RHI..."
-
-#: core/forms.py:17
-msgid "Notes from interviews or observations."
-msgstr "Notes d'entretiens ou observations."
-
-#: core/forms.py:31 templates/report_detail.html:32
+#: core/forms.py:143 templates/report_detail.html:32
 msgid "Yes"
 msgstr "Oui"
 
-#: core/forms.py:31 templates/report_detail.html:34
+#: core/forms.py:143 templates/report_detail.html:34
 msgid "No"
 msgstr "Non"
+
+#: core/forms.py:164 core/forms.py:259
+msgid "Invalid start date."
+msgstr "Date de début invalide."
+
+#: core/forms.py:172 core/forms.py:267
+msgid "Invalid end date."
+msgstr "Date de fin invalide."
+
+#: core/forms.py:176 core/forms.py:271
+msgid "Start date must be before or equal to end date."
+msgstr "La date de début doit être avant ou égale à la date de fin."
 
 #: core/models.py:8
 msgid "Ouest"
@@ -182,8 +302,8 @@ msgid "(e.g., news report, local knowledge, eyewitness account, etc.)"
 msgstr "(ex. : article de presse, connaissance locale, témoignage, etc.)"
 
 #: core/models.py:106
-msgid "Some Comments"
-msgstr "Des Commentaires"
+msgid "Some Comments (Optional)"
+msgstr "Quelques commentaires (Optionnel)"
 
 #: core/models.py:107
 msgid "Any additional comments or observations?"
@@ -230,26 +350,11 @@ msgstr "Zone supplémentaire"
 msgid "Extra Areas"
 msgstr "Zones supplémentaires"
 
-#: geogang/settings.py:149
-msgid "English"
-msgstr "Anglais"
-
-#: geogang/settings.py:150
-msgid "French"
-msgstr "Français"
-
-#: geogang/settings.py:151
-msgid "Haitian Creole"
-msgstr "Créole haïtien"
-
-#: templates/base.html:7
+#: templates/base.html:10 templates/base.html:22 templates/base.html:28
 msgid "Haiti Gang Mapping"
 msgstr "Cartographie des gangs en Haïti"
 
-#: templates/home.html:10
-msgid "Haiti Gang Mapping Project"
-msgstr "Projet de cartographie des gangs en Haïti"
-
+#: templates/base.html:11 templates/base.html:23 templates/base.html:29
 #: templates/home.html:12
 msgid ""
 "This survey is part of a research project to map the evolution of gang-"
@@ -257,6 +362,10 @@ msgid ""
 msgstr ""
 "Cette enquête fait partie d'un projet de recherche visant à cartographier "
 "l'évolution des zones contrôlées par les gangs en Haïti."
+
+#: templates/home.html:10
+msgid "Haiti Gang Mapping Project"
+msgstr "Projet de cartographie des gangs en Haïti"
 
 #: templates/home.html:15
 msgid ""
@@ -272,8 +381,8 @@ msgstr ""
 "partagez pas de détails personnels à moins d'être à l'aise."
 
 #: templates/home.html:18
-msgid "Submit Gang Report"
-msgstr "Soumettre un rapport de gang"
+msgid "Start Now"
+msgstr "Démarrer maintenant"
 
 #: templates/home.html:26
 msgid "Already Reported Gangs"
@@ -303,29 +412,33 @@ msgstr "Supprimer"
 msgid "No gang reports submitted yet."
 msgstr "Aucun rapport de gang soumis pour le moment."
 
-#: templates/report.html:18 templates/report.html:220
+#: templates/report.html:22 templates/report.html:254
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
 msgstr "Retour à l'accueil"
 
-#: templates/report.html:19
+#: templates/report.html:23
 msgid "Gang Activity Report Form"
 msgstr "Formulaire de rapport d'activité des gangs"
 
-#: templates/report.html:100
+#: templates/report.html:107
 msgid "Select a department"
 msgstr "Sélectionnez un département"
 
-#: templates/report.html:113
+#: templates/report.html:120
 msgid "Additional places this gang controls or used to control (if any):"
 msgstr "Autres lieux que ce gang contrôle ou contrôlait (le cas échéant) :"
 
-#: templates/report.html:165
+#: templates/report.html:175
 msgid "Add Another Area"
 msgstr "Ajouter une autre zone"
 
-#: templates/report.html:217
+#: templates/report.html:187 templates/report.html:220
+msgid "Select all that apply"
+msgstr "Sélectionnez tout ce qui s'applique"
+
+#: templates/report.html:251
 msgid "Submit Report"
 msgstr "Soumettre le rapport"
 
@@ -357,7 +470,7 @@ msgstr "Zone principale d'opération :"
 msgid "Start Date:"
 msgstr "Date de début :"
 
-#: templates/report_detail.html:25
+#: templates/report_detail.html:25 templates/report_detail.html:50
 msgid "End Date:"
 msgstr "Date de fin :"
 
@@ -440,3 +553,27 @@ msgstr "Date de fin"
 #: templates/reports_list.html:29
 msgid "No reports submitted yet."
 msgstr "Aucun rapport soumis pour le moment."
+
+#~ msgid "Mention major attacks, negotiations, etc."
+#~ msgstr "Mentionner les principales attaques, négociations, etc."
+
+#~ msgid "Le Nouvelliste article, RHI report..."
+#~ msgstr "Article du Nouvelliste, rapport RHI..."
+
+#~ msgid "Notes from interviews or observations."
+#~ msgstr "Notes d'entretiens ou observations."
+
+#~ msgid "Croix-des-Bouquets, Carrefour, etc."
+#~ msgstr "Croix-des-Bouquets, Carrefour, etc."
+
+#~ msgid "English"
+#~ msgstr "Anglais"
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "Créole haïtien"
+
+#~ msgid "Submit Gang Report"
+#~ msgstr "Soumettre un rapport de gang"

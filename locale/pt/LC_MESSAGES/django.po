@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 18:03-0500\n"
+"POT-Creation-Date: 2025-05-28 18:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,353 +16,331 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 #: core/forms.py:8
 msgid "Choose month"
-msgstr "Chwazi mwa"
+msgstr "Escolha o mês"
 
 #: core/forms.py:12
 msgid "Choose year"
-msgstr "Chwazi ane"
+msgstr "Escolha o ano"
 
 #: core/forms.py:18
 msgid "Kidnapping"
-msgstr "Kidnapin"
+msgstr "Sequestro"
 
 #: core/forms.py:19
 msgid "Extortion"
-msgstr "Ekstòsyon"
+msgstr "Extorsão"
 
 #: core/forms.py:20
 msgid "Murder"
-msgstr "Asasina"
+msgstr "Assassinato"
 
 #: core/forms.py:21
 msgid "Drug trafficking"
-msgstr "Trafik dwòg"
+msgstr "Tráfico de drogas"
 
 #: core/forms.py:22
 msgid "Robbery"
-msgstr "Vòl"
+msgstr "Roubo"
 
 #: core/forms.py:23
 msgid "Rape"
-msgstr "Vyòl"
+msgstr "Estupro"
 
 #: core/forms.py:24
 msgid "Human trafficking"
-msgstr "Trafik moun"
+msgstr "Tráfico de pessoas"
 
 #: core/forms.py:25
 msgid "Armed assaults"
-msgstr "Atak ame"
+msgstr "Ataques armados"
 
 #: core/forms.py:26
 msgid "Carjacking"
-msgstr "Vòlè machin"
+msgstr "Roubo de veículos"
 
 #: core/forms.py:27
 msgid "Illegal arms trade"
-msgstr "Komès zam ilegal"
+msgstr "Comércio ilegal de armas"
 
 #: core/forms.py:28
 msgid "Smuggling"
-msgstr "Kontrebann"
+msgstr "Contrabando"
 
 #: core/forms.py:29 core/forms.py:42
 msgid "Other"
-msgstr "Lòt"
+msgstr "Outro"
 
 #: core/forms.py:34
 msgid "Social Media"
-msgstr "Rezo Sosyal"
+msgstr "Redes sociais"
 
 #: core/forms.py:35
 msgid "Word of Mouth"
-msgstr "Bri kouri"
+msgstr "Boca a boca"
 
 #: core/forms.py:36
 msgid "Newspaper"
-msgstr "Jounal"
+msgstr "Jornal"
 
 #: core/forms.py:37
 msgid "Radio"
-msgstr "Radyo"
+msgstr "Rádio"
 
 #: core/forms.py:38
 msgid "TV"
-msgstr "Televizyon"
+msgstr "Televisão"
 
 #: core/forms.py:39
 msgid "Government Reports"
-msgstr "Rapò gouvènman"
+msgstr "Relatórios governamentais"
 
 #: core/forms.py:40
 msgid "NGO & Human Rights Organizations"
-msgstr "ONG & Òganizasyon Dwa Moun"
+msgstr "ONGs e organizações de direitos humanos"
 
 #: core/forms.py:41
 msgid "Community Watch Groups"
-msgstr "Gwoup Siveyans Kominotè"
+msgstr "Grupos de vigilância comunitária"
 
 #: core/forms.py:49 core/forms.py:211
 msgid "Start Month"
-msgstr "Mwa li kòmanse"
+msgstr "Mês de início"
 
 #: core/forms.py:50 core/forms.py:212
 msgid "Start Year"
-msgstr "Ane li kòmanse"
+msgstr "Ano de início"
 
 #: core/forms.py:51 core/forms.py:213
 msgid "End Month"
-msgstr "Mwa li fini"
+msgstr "Mês de término"
 
 #: core/forms.py:52 core/forms.py:214
 msgid "End Year"
-msgstr "Ane li fini"
+msgstr "Ano de término"
 
 #: core/forms.py:59
 msgid "Gang Activities"
-msgstr "Aktivite gang yo"
+msgstr "Atividades de gangues"
 
 #: core/forms.py:63 core/forms.py:75
 msgid "If Other, specify"
-msgstr "Si gen lòt, presize l"
+msgstr "Se outro, especifique"
 
 #: core/forms.py:64
 msgid "Other activity..."
-msgstr "Lòt aktivite..."
+msgstr "Outra atividade..."
 
 #: core/forms.py:71
 msgid "Sources"
-msgstr "Sous"
+msgstr "Fontes"
 
 #: core/forms.py:76
 msgid "Other source..."
-msgstr "Lòt sous..."
-
-#: core/forms.py:83
-msgid "Baz Pilat, 400 Mawozo..."
-msgstr "Baz Pilat, 400 Mawozo..."
-
-#: core/forms.py:84
-msgid "Delmas 32"
-msgstr "Dèlma 32"
-
-#: core/forms.py:86
-msgid "Kidnapping, extortion, drug trafficking..."
-msgstr "Kidnapin, estòsyon, trafik dwòg..."
-
-#: core/forms.py:88
-msgid "G9, Baz Gran Ravin..."
-msgstr "G9, Baz Gran Ravin..."
+msgstr "Outra fonte..."
 
 #: core/forms.py:143 templates/report_detail.html:32
 msgid "Yes"
-msgstr "Wi"
+msgstr "Sim"
 
 #: core/forms.py:143 templates/report_detail.html:34
 msgid "No"
-msgstr "Non"
+msgstr "Não"
 
 #: core/forms.py:164 core/forms.py:259
 msgid "Invalid start date."
-msgstr "Dat kòmanse sa pa valid"
+msgstr "Data de início inválida."
 
 #: core/forms.py:172 core/forms.py:267
 msgid "Invalid end date."
-msgstr "Dat fini sa pa valid"
+msgstr "Data de término inválida."
 
 #: core/forms.py:176 core/forms.py:271
 msgid "Start date must be before or equal to end date."
-msgstr "Date kòmanse a dwe avan oubyen menm ak dat fen an"
+msgstr "A data de início deve ser anterior ou igual à data de término."
 
 #: core/models.py:8
 msgid "Ouest"
-msgstr "Lwès"
+msgstr "Oeste"
 
 #: core/models.py:9
 msgid "Artibonite"
-msgstr "Latibonit"
+msgstr "Artibonite"
 
 #: core/models.py:10
 msgid "Nord"
-msgstr "Nò"
+msgstr "Norte"
 
 #: core/models.py:11
 msgid "Centre"
-msgstr "Sant"
+msgstr "Centro"
 
 #: core/models.py:12
 msgid "Grande-Anse"
-msgstr "Grandans"
+msgstr "Grande-Anse"
 
 #: core/models.py:13
 msgid "Nippes"
-msgstr "Nip"
+msgstr "Nippes"
 
 #: core/models.py:14
 msgid "Nord-Est"
-msgstr "Nòdès"
+msgstr "Nordeste"
 
 #: core/models.py:15
 msgid "Nord-Ouest"
-msgstr "Nòdwès"
+msgstr "Noroeste"
 
 #: core/models.py:16
 msgid "Sud"
-msgstr "Sid"
+msgstr "Sul"
 
 #: core/models.py:17
 msgid "Sud-Est"
-msgstr "Sidès"
+msgstr "Sudeste"
 
 #: core/models.py:52
 msgid "What is the name of the gang?"
-msgstr "Ki non gang lan?"
+msgstr "Qual é o nome da gangue?"
 
 #: core/models.py:53
 msgid "If there’s no official name, write the name used locally."
-msgstr "Si pa gen non ofisyèl, ekri non ki itilize nan lokalite a."
+msgstr "Se não houver nome oficial, escreva o nome usado localmente."
 
 #: core/models.py:56
 msgid "Is this gang still active?"
-msgstr "Eske gang sa a toujou aktif?"
+msgstr "Esta gangue ainda está ativa?"
 
 #: core/models.py:57
 msgid "Check \"Yes\" if the gang is currently operating."
-msgstr "Chwazi \"Wi\" si gang lan ap opere toujou."
+msgstr "Marque \"Sim\" se a gangue ainda estiver operando."
 
 #: core/models.py:61
 msgid "If known, when did this gang begin operating?"
-msgstr "Si ou konnen, ki dat gang sa a te kòmanse opere?"
+msgstr "Se souber, quando esta gangue começou a operar?"
 
 #: core/models.py:62
 msgid "Enter the approximate start date if known."
-msgstr "Antre yon dat aproksimatif si ou konnen."
+msgstr "Insira a data de início aproximada, se souber."
 
 #: core/models.py:66
 msgid "If known, when did this gang stop operating?"
-msgstr "Si ou konnen, ki dat gang sa a te sispann opere?"
+msgstr "Se souber, quando esta gangue parou de operar?"
 
 #: core/models.py:67 core/models.py:137
 msgid "Leave blank if the gang is still active or the date is unknown."
-msgstr "Kite sa vid si gang lan toujou aktif oswa si w pa konnen dat la."
+msgstr "Deixe em branco se a gangue ainda estiver ativa ou se a data for desconhecida."
 
 #: core/models.py:71
 msgid "Main neighborhood or area where this gang operates/operated?"
-msgstr "Katye prensipal oswa zòn kote gang sa a opere/te opere?"
+msgstr "Bairro principal ou área onde esta gangue opera/operava?"
 
 #: core/models.py:72
 msgid "(e.g., Cité Soleil, Martissant, Delmas 32, etc.)"
-msgstr "(Egzanp: Site Solèy, Matissan, Delmas 32, elatriye.)"
+msgstr "(Ex.: Cité Soleil, Martissant, Delmas 32, etc.)"
 
 #: core/models.py:82
 msgid "Which department does this location belong to?"
-msgstr "Nan ki depatman lokalite sa ye?"
+msgstr "A que departamento pertence esta localização?"
 
 #: core/models.py:83
 msgid "Select the department where the gang is/was most active."
-msgstr "Chwazi depatman kote gang lan pi aktif."
+msgstr "Selecione o departamento onde a gangue está/esteve mais ativa."
 
 #: core/models.py:86
 msgid "What kind of activities is/was the gang involved in?"
-msgstr "Ki kalite aktivite gang lan patisipe ladan l?"
+msgstr "Que tipo de atividades esta gangue está/estava envolvida?"
 
 #: core/models.py:87
-msgid ""
-"Be as specific as possible. (e.g., kidnappings, drug trafficking, extortion)"
-msgstr ""
-"Bay detay osi presi ke posib. (Egzanp: kidnapin, trafik dwòg, estòsyon)"
+msgid "Be as specific as possible. (e.g., kidnappings, drug trafficking, extortion)"
+msgstr "Seja o mais específico possível. (Ex.: sequestros, tráfico de drogas, extorsão)"
 
 #: core/models.py:91
 msgid "Describe the activities or key events involving this gang."
-msgstr "Dekri aktivite yo oswa evènman kle ki gen rapò ak gang sa a."
+msgstr "Descreva as atividades ou eventos-chave relacionados a esta gangue."
 
 #: core/models.py:92
 msgid "Optional. Add any context or background details."
-msgstr "Opsyonèl. Ajoute nenpòt detay anplis."
+msgstr "Opcional. Adicione qualquer contexto ou detalhes adicionais."
 
 #: core/models.py:96
 msgid "Do you know of any rival gangs in the same area?"
-msgstr "Eske ou konnen gang ki rival nan menm zòn lan?"
+msgstr "Você conhece alguma gangue rival na mesma área?"
 
 #: core/models.py:97
 msgid "List known rival gangs, if any."
-msgstr "Lis gang rival yo, si gen youn."
+msgstr "Liste as gangues rivais conhecidas, se houver."
 
 #: core/models.py:101
 msgid "Sources or references (if applicable):"
-msgstr "Sous oswa referans (si sa aplikab):"
+msgstr "Fontes ou referências (se aplicável):"
 
 #: core/models.py:102
 msgid "(e.g., news report, local knowledge, eyewitness account, etc.)"
-msgstr "(Egzanp: rapò nouvèl, konesans lokal, temwayaj, elatriye.)"
+msgstr "(Ex.: reportagem, conhecimento local, testemunho ocular, etc.)"
 
 #: core/models.py:106
 msgid "Some Comments (Optional)"
-msgstr "Kèk kòmantè (Opsyonèl)"
+msgstr "Alguns Comentários (Opcional)"
 
 #: core/models.py:107
 msgid "Any additional comments or observations?"
-msgstr "Eske w gen lòt kòmantè oswa obsèvasyon?"
+msgstr "Algum comentário ou observação adicional?"
 
 #: core/models.py:112
 msgid "Validated for public display?"
-msgstr "Valide pou afiche l piblik?"
+msgstr "Validado para exibição pública?"
 
 #: core/models.py:113
 msgid "Mark this report as validated before it appears on the website."
-msgstr "Make rapò sa a kòm valide anvan li parèt sou sit entènèt la."
+msgstr "Marque este relatório como validado antes de aparecer no site."
 
 #: core/models.py:122
 msgid "Parent report"
-msgstr "Rapò paran"
+msgstr "Relatório original"
 
 #: core/models.py:123
 msgid "If this is an edit, link to the original report."
-msgstr "Si sa se yon koreksyon, lyen ak rapò orijinal la."
+msgstr "Se for uma edição, vincule ao relatório original."
 
 #: core/models.py:132
 msgid "Area name"
-msgstr "Non zòn nan"
+msgstr "Nome da área"
 
 #: core/models.py:133
 msgid "Date taken by the gang"
-msgstr "Dat gang lan pran kontwòl zòn nan"
+msgstr "Data em que a gangue assumiu controle"
 
 #: core/models.py:136
 msgid "If known, when did this gang stop operating in this area?"
-msgstr "Si ou konnen, ki dat gang sa a sispann opere nan zòn sa a?"
+msgstr "Se souber, quando esta gangue parou de operar nesta área?"
 
 #: core/models.py:139
 msgid "Other relevant details about this area"
-msgstr "Lòt detay enpòtan sou zòn sa a"
+msgstr "Outros detalhes relevantes sobre esta área"
 
 #: core/models.py:142
 msgid "Extra Area"
-msgstr "Zòn Anplis"
+msgstr "Área Extra"
 
 #: core/models.py:143
 msgid "Extra Areas"
-msgstr "Zòn Anplis yo"
+msgstr "Áreas Extras"
 
 #: templates/base.html:10 templates/base.html:22 templates/base.html:28
 msgid "Haiti Gang Mapping"
-msgstr "Kat Jewografik Gang Ayiti"
+msgstr "Mapeamento de Gangues no Haiti"
 
 #: templates/base.html:11 templates/base.html:23 templates/base.html:29
 #: templates/home.html:12
-msgid ""
-"This survey is part of a research project to map the evolution of gang-"
-"controlled zones across Haiti."
-msgstr ""
-"Sondaj sa a se yon pati nan yon pwojè rechèch pou kateyografye aktivite gang "
-"yo atravè Ayiti."
+msgid "This survey is part of a research project to map the evolution of gang-controlled zones across Haiti."
+msgstr "Esta pesquisa faz parte de um projeto para mapear a evolução das zonas controladas por gangues no Haiti."
 
 #: templates/home.html:10
 msgid "Haiti Gang Mapping Project"
-msgstr "Pwojè Kat Jewografik Gang Ayiti"
+msgstr "Projeto de Mapeamento de Gangues no Haiti"
 
 #: templates/home.html:15
 msgid ""
@@ -371,239 +349,171 @@ msgid ""
 "            Your safety and privacy are our top priorities — do not share "
 "personal details unless comfortable."
 msgstr ""
-"Kontribisyon ou ap ede nou bati yon pi bon katografi sou kijan zòn sa yo "
-"kontwole depi lontan. Tanpri, bay enfòmasyon ki egzat.\n"
-"Sekirite ak vi prive ou se priyorite nou — pa pataje detay pèsonèl sof si ou "
-"santi ou alèz."
+"Sua contribuição nos ajudará a construir uma visão mais clara de como essas zonas evoluíram ao longo do tempo. Por favor, forneça informações precisas e respeitosas.\nSua segurança e privacidade são nossas principais prioridades — não compartilhe informações pessoais a menos que esteja confortável."
 
 #: templates/home.html:18
 msgid "Start Now"
-msgstr "Demare Kounya"
+msgstr "Começar agora"
 
 #: templates/home.html:26
 msgid "Already Reported Gangs"
-msgstr "Gang ki deja rapòte yo"
+msgstr "Gangues já reportadas"
 
 #: templates/home.html:34
 msgid "Status:"
-msgstr "Estati:"
+msgstr "Status:"
 
 #: templates/home.html:35 templates/report_detail.html:10
 msgid "Department:"
-msgstr "Depatman:"
+msgstr "Departamento:"
 
 #: templates/home.html:36
 msgid "Main Area:"
-msgstr "Zòn prensipal:"
+msgstr "Área principal:"
 
 #: templates/home.html:42 templates/report_detail.html:96
 msgid "Edit"
-msgstr "Modifye"
+msgstr "Editar"
 
 #: templates/home.html:46 templates/report_detail.html:100
 msgid "Delete"
-msgstr "Efase"
+msgstr "Excluir"
 
 #: templates/home.html:55
 msgid "No gang reports submitted yet."
-msgstr "Pa gen rapò sou gang ki soumèt pou kounye a."
+msgstr "Nenhum relatório de gangue foi enviado ainda."
 
 #: templates/report.html:22 templates/report.html:254
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
-msgstr "Retounen nan akèy la"
+msgstr "Voltar para a página inicial"
 
 #: templates/report.html:23
 msgid "Gang Activity Report Form"
-msgstr "Fòmilè rapò sou aktivite gang"
+msgstr "Formulário de Relatório de Atividades de Gangues"
 
 #: templates/report.html:107
 msgid "Select a department"
-msgstr "Chwazi yon depatman"
+msgstr "Selecione um departamento"
 
 #: templates/report.html:120
 msgid "Additional places this gang controls or used to control (if any):"
-msgstr "Lòt kote gang sa a kontwole oswa te konn kontwole (si genyen):"
+msgstr "Lugares adicionais que esta gangue controla ou costumava controlar (se houver):"
 
 #: templates/report.html:175
 msgid "Add Another Area"
-msgstr "Ajoute yon lòt zòn"
+msgstr "Adicionar Outra Área"
 
 #: templates/report.html:187 templates/report.html:220
 msgid "Select all that apply"
-msgstr "Seleksyone tout sa ki aplikab"
+msgstr "Selecione todas as opções que correspondem"
 
 #: templates/report.html:251
 msgid "Submit Report"
-msgstr "Soumèt Rapò a"
+msgstr "Enviar Relatório"
 
 #: templates/report_confirm_delete.html:6
 msgid "Delete Report"
-msgstr "Efase rapò"
+msgstr "Excluir Relatório"
 
 #: templates/report_confirm_delete.html:7
 #, python-format
-msgid ""
-"Are you sure you want to delete the report <strong>%(gang_name)s</strong>?"
-msgstr "Eske ou sèten ou vle efase rapò <strong>%(gang_name)s</strong>?"
+msgid "Are you sure you want to delete the report <strong>%(gang_name)s</strong>?"
+msgstr "Tem certeza de que deseja excluir o relatório <strong>%(gang_name)s</strong>?"
 
 #: templates/report_confirm_delete.html:9
 msgid "Yes, Delete"
-msgstr "Wi, efase"
+msgstr "Sim, Excluir"
 
 #: templates/report_confirm_delete.html:10
 msgid "Cancel"
-msgstr "Anile"
+msgstr "Cancelar"
 
 #: templates/report_detail.html:14
 msgid "Main Area of Operation:"
-msgstr "Zòn prensipal operasyon an:"
+msgstr "Área principal de operação:"
 
 #: templates/report_detail.html:19
 msgid "Start Date:"
-msgstr "Dat kòmansman:"
+msgstr "Data de início:"
 
 #: templates/report_detail.html:25 templates/report_detail.html:50
 msgid "End Date:"
-msgstr "Dat fen:"
+msgstr "Data de término:"
 
 #: templates/report_detail.html:30
 msgid "Is Active:"
-msgstr "Aktif:"
+msgstr "Está ativo:"
 
 #: templates/report_detail.html:40
 msgid "Additional Areas"
-msgstr "Lòt zòn"
+msgstr "Áreas adicionais"
 
 #: templates/report_detail.html:47
 msgid "Date taken:"
-msgstr "Dat gang lan pran kontwòl:"
+msgstr "Data tomada:"
 
 #: templates/report_detail.html:62
 msgid "Activities:"
-msgstr "Aktivite:"
+msgstr "Atividades:"
 
 #: templates/report_detail.html:68
 msgid "Description:"
-msgstr "Deskripsyon:"
+msgstr "Descrição:"
 
 #: templates/report_detail.html:75
 msgid "Rival Gangs:"
-msgstr "Gang rival yo:"
+msgstr "Gangues rivais:"
 
 #: templates/report_detail.html:82
 msgid "Sources:"
-msgstr "Sous:"
+msgstr "Fontes:"
 
 #: templates/report_detail.html:89
 msgid "Additional Comments:"
-msgstr "Lòt kòmantè:"
+msgstr "Comentários adicionais:"
 
 #: templates/report_success.html:7
 msgid "Thank you for your report!"
-msgstr "Mèsi pou rapò ou a!"
+msgstr "Obrigado pelo seu relatório!"
 
 #: templates/report_success.html:8
-msgid ""
-"Your submission has been received and is pending validation. We appreciate "
-"your contribution to a safer and more informed Haiti."
-msgstr ""
-"Nou resevwa soumisyon ou a, kote gen moun ki pral valide l. Nou apresye "
-"kontribisyon ou nan yon Ayiti ki pi an sekirite e ki gen plis enfòmasyon."
+msgid "Your submission has been received and is pending validation. We appreciate your contribution to a safer and more informed Haiti."
+msgstr "Sua submissão foi recebida e está aguardando validação. Agradecemos sua contribuição para um Haiti mais seguro e informado."
 
 #: templates/report_success.html:12
 msgid "Submit Another Report"
-msgstr "Soumèt yon lòt rapò"
+msgstr "Enviar outro relatório"
 
 #: templates/reports_list.html:5
 msgid "Submitted Gang Reports"
-msgstr "Rapò gang ki soumèt yo"
+msgstr "Relatórios de gangues enviados"
 
 #: templates/reports_list.html:9
 msgid "Gang Name"
-msgstr "Non gang lan"
+msgstr "Nome da gangue"
 
 #: templates/reports_list.html:10
 msgid "Department"
-msgstr "Depatman"
+msgstr "Departamento"
 
 #: templates/reports_list.html:11
 msgid "Main Area"
-msgstr "Zòn prensipal"
+msgstr "Área principal"
 
 #: templates/reports_list.html:12
 msgid "Active"
-msgstr "Aktif"
+msgstr "Ativo"
 
 #: templates/reports_list.html:13
 msgid "Start Date"
-msgstr "Dat kòmansman"
+msgstr "Data de início"
 
 #: templates/reports_list.html:14
 msgid "End Date"
-msgstr "Dat fen"
+msgstr "Data de término"
 
 #: templates/reports_list.html:29
 msgid "No reports submitted yet."
-msgstr "Pa gen rapò ki soumèt pou kounye a."
-
-msgid "January"
-msgstr "Janvye"
-
-msgid "February"
-msgstr "Fevriye"
-
-msgid "March"
-msgstr "Mas"
-
-msgid "April"
-msgstr "Avril"
-
-msgid "May"
-msgstr "Me"
-
-msgid "June"
-msgstr "Jen"
-
-msgid "July"
-msgstr "Jiyè"
-
-msgid "August"
-msgstr "Out"
-
-msgid "September"
-msgstr "Septanm"
-
-msgid "October"
-msgstr "Oktòb"
-
-msgid "November"
-msgstr "Novanm"
-
-msgid "December"
-msgstr "Desanm"
-
-#~ msgid "Mention major attacks, negotiations, etc."
-#~ msgstr "Mansyonne gwo atak, negosyasyon, elatriye."
-
-#~ msgid "Le Nouvelliste article, RHI report..."
-#~ msgstr "Atik Le Nouvelliste, rapò RHI..."
-
-#~ msgid "Notes from interviews or observations."
-#~ msgstr "Nòt ki soti nan entèvyou oswa obsèvasyon."
-
-#~ msgid "Croix-des-Bouquets, Carrefour, etc."
-#~ msgstr "Kwadebouke, Kafou, elatriye."
-
-#~ msgid "English"
-#~ msgstr "Anglè"
-
-#~ msgid "French"
-#~ msgstr "Fransè"
-
-#~ msgid "Haitian Creole"
-#~ msgstr "Kreyòl Ayisyen"
-
-#~ msgid "Submit Gang Report"
-#~ msgstr "Soumèt yon rapò sou gang"
+msgstr "Nenhum relatório foi enviado ainda."

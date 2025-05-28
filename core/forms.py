@@ -32,12 +32,16 @@ ACTIVITY_CHOICES = [
 
 SOURCE_CHOICES = [
     ('social_media', _('Social Media')),
-    ('mouth_to_mouth', _('Mouth of Mouth')),
+    ('mouth_to_mouth', _('Word of Mouth')),
     ('newspaper', _('Newspaper')),
     ('radio', _('Radio')),
     ('tv', _('TV')),
+    ('government_reports', _('Government Reports')),
+    ('ngo_reports', _('NGO & Human Rights Organizations')),
+    ('community_watch', _('Community Watch Groups')),
     ('other', _('Other')),
 ]
+
 
 
 class GangReportForm(forms.ModelForm):
@@ -80,10 +84,10 @@ class GangReportForm(forms.ModelForm):
             'main_area': _('Delmas 32'),
             # 'extra_areas': _('Croix-des-Bouquets, Carrefour, etc.'),
             'activities': _('Kidnapping, extortion, drug trafficking...'),
-            'description': _('Mention major attacks, negotiations, etc.'),
+            # 'description': _('Mention major attacks, negotiations, etc.'),
             'rival_gangs': _('G9, Baz Gran Ravin...'),
-            'sources': _('Le Nouvelliste article, RHI report...'),
-            'comments': _('Notes from interviews or observations.'),
+            # 'sources': _('Le Nouvelliste article, RHI report...'),
+            # 'comments': _('Notes from interviews or observations.'),
         }
 
         for field_name, placeholder in placeholders.items():

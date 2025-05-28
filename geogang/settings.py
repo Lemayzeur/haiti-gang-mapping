@@ -155,8 +155,10 @@ LANGUAGES = (
     ('ht', '🇭🇹 Kreyòl Ayisyen'),
     ('fr', '🇫🇷 Français'),
     ('en', '🇺🇸 English'), 
-    ('es', '🇪🇸 Español'),   
+    ('es', '🇪🇸 Español'),
+    ('pt', '🇧🇷 Português'),
 )
+
 EXTRA_LANG_INFO = {
     'ht': {
         'bidi': False, # right-to-left
