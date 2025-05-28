@@ -139,7 +139,7 @@ msgstr "(Egzanp: Site Solèy, Matissan, Delmas 32, elatriye.)"
 
 #: core/models.py:82
 msgid "Which department does this location belong to?"
-msgstr "Ki depatman kote sa a fè pati?"
+msgstr "Nan ki depatman lokalite sa ye?"
 
 #: core/models.py:83
 msgid "Select the department where the gang is/was most active."
@@ -252,7 +252,7 @@ msgid ""
 "This survey is part of a research project to map the evolution of gang-"
 "controlled zones across Haiti."
 msgstr ""
-"Sondaj sa a se yon pati nan yon pwojè rechèch pou kateografye aktivite gang "
+"Sondaj sa a se yon pati nan yon pwojè rechèch pou kateyografye aktivite gang "
 "yo atravè Ayiti."
 
 #: templates/home.html:15

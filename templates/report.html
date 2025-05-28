@@ -53,13 +53,14 @@
                     <span class="text-danger">*</span>
                 	{% endif %}</label>
 
-                	<div class="input-group">
-                    	{{ form.start_date|add_class:"form-control flatpickr" }}
-                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#id_start_date">
-			                <i class="bi bi-calendar3"></i>
-			            </button>
-			        </div>
-
+                    <div class="row">
+                        <div class="col">
+                            {{ form.start_month|add_class:"form-select" }} 
+                        </div>
+                        <div class="col">
+                            {{ form.start_year|add_class:"form-select" }}
+                        </div>
+                    </div>
 
                     {% if form.start_date.help_text %}
 	                <div class="form-text">{{ form.start_date.help_text }}</div>
@@ -71,11 +72,13 @@
                 	{% endif %}</label>
 
 
-                	<div class="input-group">
-                    	{{ form.end_date|add_class:"form-control flatpickr" }}
-                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#id_end_date">
-			                <i class="bi bi-calendar3"></i>
-			            </button>
+                	<div class="row">
+                    	<div class="col">
+                            {{ form.end_month|add_class:"form-select" }} 
+                        </div>
+                        <div class="col">
+                            {{ form.end_year|add_class:"form-select" }}
+                        </div>
 			        </div>
                     
 
@@ -130,12 +133,14 @@
 				                {% endif %}</label>
 				                    
 
-				                    <div class="input-group">
-				                    	{{ form.date_taken|add_class:"form-control flatpickr" }}
-				                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#{{form.date_taken.id_for_label}}">
-							                <i class="bi bi-calendar3"></i>
-							            </button>
-							        </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        {{ form.date_taken_month|add_class:"form-select" }}
+                                      </div>
+                                      <div class="col">
+                                        {{ form.date_taken_year|add_class:"form-select" }}
+                                      </div>
+                                    </div>
 
 				                    {% if form.date_taken.help_text %}
 					                <div class="form-text">{{ form.date_taken.help_text }}</div>
@@ -146,13 +151,14 @@
 				                    <span class="text-danger">*</span>
 				                	{% endif %}</label>
 				                    
-
-				                    <div class="input-group">
-				                    	{{ form.end_date|add_class:"form-control flatpickr" }}
-				                    	<button type="button" class="btn btn-outline-secondary trigger-flatpickr" data-target="#{{form.end_date.id_for_label}}">
-							                <i class="bi bi-calendar3"></i>
-							            </button>
-							        </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        {{ form.end_date_month|add_class:"form-select" }}
+                                      </div>
+                                      <div class="col">
+                                        {{ form.end_date_year|add_class:"form-select" }}
+                                      </div>
+                                    </div>
 
 				                   	{% if form.end_date.help_text %}
 					                <div class="form-text">{{ form.end_date.help_text }}</div>
@@ -177,7 +183,11 @@
                 <label for="id_activities" class="form-label">{{form.activities.label}} {% if form.activities.field.required %}
                     <span class="text-danger">*</span>
                 {% endif %}</label>
-                {{ form.activities|add_class:"form-control" }}
+
+
+                {{ form.activities }}
+                {{ form.other_activity|add_class:"form-control" }}
+
                 {% if form.activities.help_text %}
                 <div class="form-text">{{ form.activities.help_text }}</div>
             	{% endif %}
@@ -198,7 +208,10 @@
                 <label for="id_sources" class="form-label">{{form.sources.label}} {% if form.sources.field.required %}
                     <span class="text-danger">*</span>
                 {% endif %}</label>
-                {{ form.sources|add_class:"form-control" }}
+
+
+                {{ form.sources }}
+                {{ form.other_source|add_class:"form-control" }}
 
                 {% if form.sources.help_text %}
                 <div class="form-text">{{ form.sources.help_text }}</div>
@@ -290,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('add-more').addEventListener('click', function() {
         const newForm = document.querySelectorAll('.formset-row')[0].cloneNode(true);
         newForm.style.display = 'block';
-        newForm.querySelectorAll('input, textarea').forEach(el => {
+        newForm.querySelectorAll('input, textarea, select').forEach(el => {
             el.name = el.name.replace(/\d+/, formIdx);
             el.id = el.id.replace(/\d+/, formIdx);
             el.value = '';
@@ -325,6 +338,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+    });
+
+    // -----------------------------
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleField = (checkboxSelector, inputSelector) => {
+        const checkboxes = document.querySelectorAll(checkboxSelector);
+        const inputField = document.querySelector(inputSelector);
+
+        const toggle = () => {
+          const checked = Array.from(checkboxes).some(cb => cb.checked && cb.value === 'other');
+          inputField.style.display = checked ? 'block' : 'none';
+        };
+
+        checkboxes.forEach(cb => cb.addEventListener('change', toggle));
+        toggle();  // Initial call
+      };
+
+      toggleField('input[name="activities"]', 'input[name="other_activity"]');
+      toggleField('input[name="sources"]', 'input[name="other_source"]');
     });
 
 });

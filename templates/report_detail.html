@@ -13,16 +13,16 @@
     <div class="mb-3">
         <strong>{% translate 'Main Area of Operation:' %}</strong> {{ object.main_area }}
     </div>
-
+    
     {% if object.start_date %}
     <div class="mb-3">
-        <strong>{% translate 'Start Date:' %}</strong> {{ object.start_date }}
+        <strong>{% translate 'Start Date:' %}</strong> {{ object.start_date|date:"F Y" }}
     </div>
     {% endif %}
 
     {% if object.end_date %}
     <div class="mb-3">
-        <strong>{% translate 'End Date:' %}</strong> {{ object.end_date }}
+        <strong>{% translate 'End Date:' %}</strong> {{ object.end_date|date:"F Y" }}
     </div>
     {% endif %}
 
@@ -44,10 +44,10 @@
             <li class="list-group-item">
                 <strong>{{ area.name }}</strong>
                 {% if area.date_taken %}
-                    <br><small class="text-muted">{% translate 'Date taken:' %} {{ area.date_taken }}</small>
+                    <br><small class="text-muted">{% translate 'Date taken:' %} {{ area.date_taken|date:"F Y" }}</small>
                 {% endif %}
                 {% if area.end_date %}
-                    <br><small class="text-muted">{% translate 'End Date:' %} {{ area.end_date }}</small>
+                    <br><small class="text-muted">{% translate 'End Date:' %} {{ area.end_date|date:"F Y" }}</small>
                 {% endif %}
             </li>
             {% endfor %}
