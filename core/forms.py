@@ -21,8 +21,14 @@ ACTIVITY_CHOICES = [
     ('drug_trafficking', _('Drug trafficking')),
     ('robbery', _('Robbery')),
     ('rape', _('Rape')),
+    ('human_trafficking', _('Human trafficking')),
+    ('armed_assaults', _('Armed assaults')),
+    ('carjacking', _('Carjacking')),
+    ('illegal_arms_trade', _('Illegal arms trade')),
+    ('smuggling', _('Smuggling')),
     ('other', _('Other')),
 ]
+
 
 SOURCE_CHOICES = [
     ('social_media', _('Social Media')),
@@ -131,6 +137,7 @@ class GangReportForm(forms.ModelForm):
             #     format='%d/%m/%Y',
             # ),
             'is_active': forms.RadioSelect(choices=[(True, _('Yes')), (False, _('No'))]),
+            'comments': forms.Textarea(attrs={'rows': 3}),
         }
 
     def clean(self):

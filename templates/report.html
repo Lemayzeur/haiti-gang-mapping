@@ -185,7 +185,15 @@
                 {% endif %}</label>
 
 
-                {{ form.activities }}
+                {% for checkbox in form.activities %}
+                    <div class="ms-1">
+                        {{ checkbox.tag }}
+                        <label class="form-check-label fw-normal" for="{{ checkbox.id_for_label }}">
+                            {{ checkbox.choice_label }}
+                        </label>
+                    </div>
+                {% endfor %}
+
                 {{ form.other_activity|add_class:"form-control" }}
 
                 {% if form.activities.help_text %}
@@ -210,7 +218,14 @@
                 {% endif %}</label>
 
 
-                {{ form.sources }}
+                {% for checkbox in form.sources %}
+                    <div class="ms-1">
+                        {{ checkbox.tag }}
+                        <label class="form-check-label fw-normal" for="{{ checkbox.id_for_label }}">
+                            {{ checkbox.choice_label }}
+                        </label>
+                    </div>
+                {% endfor %}
                 {{ form.other_source|add_class:"form-control" }}
 
                 {% if form.sources.help_text %}
@@ -258,47 +273,10 @@
 	            }
 	        });
 	}
-
-	// altFormat: "F j, Y",
-  	flatpickr(".flatpickr", {
-	    altInput: true,
-	    allowInput: true,
-	    altFormat: "d/m/Y",
-	    dateFormat: "d/m/Y",
-	    maxDate: "today"
-  	});
-
-
-  	document.querySelectorAll('.trigger-flatpickr').forEach(button => {
-        button.addEventListener('click', function () {
-            const input = document.querySelector(this.dataset.target);
-            if (input._flatpickr) {
-                input._flatpickr.open();
-            }
-        });
-	});
-
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     let formIdx = {{ extraarea_formset.total_form_count }};
-
-    function initFlatpickrForElement(el) {
-        // flatpickr(el, {
-        //     altInput: true,
-        // allowInput: true.
-		//     altFormat: "d/m/Y",
-		//     dateFormat: "Y-m-d",
-		//     maxDate: "today"
-        // });
-    }
-
-    function reinitFlatpickr(container) {
-        container.querySelectorAll('.flatpickr').forEach(el => {
-        	console.log(el)
-            initFlatpickrForElement(el);
-        });
-    }
 
     document.getElementById('add-more').addEventListener('click', function() {
         const newForm = document.querySelectorAll('.formset-row')[0].cloneNode(true);
@@ -316,9 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('extra-areas-formset').appendChild(newForm);
         document.getElementById('id_extra_areas-TOTAL_FORMS').value = ++formIdx;
-
-
-        reinitFlatpickr(newForm);
     });
 
     document.getElementById('extra-areas-formset').addEventListener('click', function(e) {
@@ -342,7 +317,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // -----------------------------
 
-    document.addEventListener("DOMContentLoaded", function () {
       const toggleField = (checkboxSelector, inputSelector) => {
         const checkboxes = document.querySelectorAll(checkboxSelector);
         const inputField = document.querySelector(inputSelector);
@@ -358,7 +332,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       toggleField('input[name="activities"]', 'input[name="other_activity"]');
       toggleField('input[name="sources"]', 'input[name="other_source"]');
-    });
 
 });
 </script>
