@@ -6,7 +6,7 @@ class LanguageMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        translation.activate(settings.LANGUAGE_CODE)  # or your language code
+        translation.activate(settings.LANGUAGE_CODE)
         response = self.get_response(request)
         translation.deactivate()
         return response

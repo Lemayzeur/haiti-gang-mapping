@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 18:03-0500\n"
+"POT-Creation-Date: 2025-05-29 10:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "1 : 2;\n"
 
 #: core/forms.py:8
-msgid "Choose month"
-msgstr "Elige un mes"
+msgid "Month"
+msgstr "Mes"
 
 #: core/forms.py:12
-msgid "Choose year"
-msgstr "Elige un año"
+msgid "Year"
+msgstr "Año"
 
 #: core/forms.py:18
 msgid "Kidnapping"
@@ -415,35 +415,35 @@ msgstr "Eliminar"
 msgid "No gang reports submitted yet."
 msgstr "No se han presentado informes de pandillas aún."
 
-#: templates/report.html:22 templates/report.html:254
+#: templates/report.html:21 templates/report.html:331
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
 msgstr "Volver a Inicio"
 
-#: templates/report.html:23
+#: templates/report.html:22
 msgid "Gang Activity Report Form"
 msgstr "Formulario de Informe de Actividad de Pandillas"
 
-#: templates/report.html:107
+#: templates/report.html:138
 msgid "Select a department"
 msgstr "Seleccionar un departamento"
 
-#: templates/report.html:120
+#: templates/report.html:157
 msgid "Additional places this gang controls or used to control (if any):"
 msgstr ""
 "Lugares adicionales que esta pandilla controla o solía controlar (si los "
 "hay):"
 
-#: templates/report.html:175
+#: templates/report.html:230
 msgid "Add Another Area"
 msgstr "Agregar Otra Área"
 
-#: templates/report.html:187 templates/report.html:220
+#: templates/report.html:242 templates/report.html:287
 msgid "Select all that apply"
 msgstr "Seleccione todas las opciones que correspondan"
 
-#: templates/report.html:251
+#: templates/report.html:328
 msgid "Submit Report"
 msgstr "Enviar Informe"
 
@@ -558,6 +558,12 @@ msgstr "Fecha de Fin"
 #: templates/reports_list.html:29
 msgid "No reports submitted yet."
 msgstr "Aún no se han presentado informes."
+
+#~ msgid "Choose month"
+#~ msgstr "Elige un mes"
+
+#~ msgid "Choose year"
+#~ msgstr "Elige un año"
 
 #~ msgid "Mention major attacks, negotiations, etc."
 #~ msgstr "Mencionar ataques importantes, negociaciones, etc."

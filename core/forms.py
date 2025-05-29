@@ -5,11 +5,11 @@ from django.utils.translation import gettext_lazy as _
 import datetime
 
     
-MONTHS = [('', _('Choose month'))] + [
+MONTHS = [('', _('Month'))] + [
     (i, _(datetime.date(2000, i, 1).strftime('%B'))) for i in range(1, 13)
 ]
 
-YEARS = [('', _('Choose year'))] + [
+YEARS = [('', _('Year'))] + [
     (y, y) for y in range(datetime.date.today().year, 1999, -1)
 ]
 
@@ -161,7 +161,7 @@ class GangReportForm(forms.ModelForm):
                 start_date = datetime.date(int(start_year), int(start_month), 1)
                 cleaned_data['start_date'] = start_date
             except ValueError:
-                raise self.add_error('start_date', (_("Invalid start date.")))
+                self.add_error('start_date', (_("Invalid start date.")))
 
         # Build end_date if both parts are present
         if end_year and end_month:
@@ -169,11 +169,11 @@ class GangReportForm(forms.ModelForm):
                 end_date = datetime.date(int(end_year), int(end_month), 1)
                 cleaned_data['end_date'] = end_date
             except ValueError:
-                raise self.add_error('end_date', (_("Invalid end date.")))
+                self.add_error('end_date', (_("Invalid end date.")))
 
         # If both are present, validate order
         if start_date and end_date and start_date > end_date:
-            raise self.add_error('end_date', (_("Start date must be before or equal to end date.")))
+            self.add_error('end_date', (_("Start date must be before or equal to end date.")))
 
 
         # Activities
@@ -256,7 +256,7 @@ class ExtraAreaForm(forms.ModelForm):
                 date_taken = datetime.date(int(date_taken_year), int(date_taken_month), 1)
                 cleaned_data['date_taken'] = date_taken
             except ValueError:
-                raise forms.ValidationError(_("Invalid start date."))
+                self.add_error('date_taken', _("Invalid start date."))
 
         # Build end_date if both parts are present
         if end_date_year and end_date_month:
@@ -264,11 +264,11 @@ class ExtraAreaForm(forms.ModelForm):
                 end_date = datetime.date(int(end_date_year), int(end_date_month), 1)
                 cleaned_data['end_date'] = end_date
             except ValueError:
-                raise forms.ValidationError(_("Invalid end date."))
+                self.add_error('end_date', _("Invalid end date."))
 
         # If both are present, validate order
         if date_taken and end_date and date_taken > end_date:
-            raise forms.ValidationError(_("Start date must be before or equal to end date."))
+            self.add_error('end_date', _("Start date must be before or equal to end date."))
 
         return cleaned_data
 

@@ -70,12 +70,6 @@ class GangReportFormView(FormView):
             context['extraarea_formset'] = ExtraAreaFormSet()
         return context
 
-    def post(self, request, *args, **kwargs):
-        return super().post(request, *args, **kwargs)
-
-    def form_invalid(self, form, *args, **kwargs):
-        return super().form_invalid(form, *args, **kwargs)
-
     def form_valid(self, form):
         context = self.get_context_data()
         formset = context['extraarea_formset']
@@ -88,7 +82,6 @@ class GangReportFormView(FormView):
 
             return super().form_valid(form)
         else:
-            print(formset.errors)
             return self.form_invalid(form)
 
 class GangReportListView(LoginRequiredMixin, ListView):

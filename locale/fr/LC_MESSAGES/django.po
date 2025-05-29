@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 18:03-0500\n"
+"POT-Creation-Date: 2025-05-29 10:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: core/forms.py:8
-msgid "Choose month"
-msgstr "Choisissez un mois"
+msgid "Month"
+msgstr "Mois"
 
 #: core/forms.py:12
-msgid "Choose year"
-msgstr "Choisissez une année"
+msgid "Year"
+msgstr "Année"
 
 #: core/forms.py:18
 msgid "Kidnapping"
@@ -412,33 +412,33 @@ msgstr "Supprimer"
 msgid "No gang reports submitted yet."
 msgstr "Aucun rapport de gang soumis pour le moment."
 
-#: templates/report.html:22 templates/report.html:254
+#: templates/report.html:21 templates/report.html:331
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
 msgstr "Retour à l'accueil"
 
-#: templates/report.html:23
+#: templates/report.html:22
 msgid "Gang Activity Report Form"
 msgstr "Formulaire de rapport d'activité des gangs"
 
-#: templates/report.html:107
+#: templates/report.html:138
 msgid "Select a department"
 msgstr "Sélectionnez un département"
 
-#: templates/report.html:120
+#: templates/report.html:157
 msgid "Additional places this gang controls or used to control (if any):"
 msgstr "Autres lieux que ce gang contrôle ou contrôlait (le cas échéant) :"
 
-#: templates/report.html:175
+#: templates/report.html:230
 msgid "Add Another Area"
 msgstr "Ajouter une autre zone"
 
-#: templates/report.html:187 templates/report.html:220
+#: templates/report.html:242 templates/report.html:287
 msgid "Select all that apply"
 msgstr "Sélectionnez tout ce qui s'applique"
 
-#: templates/report.html:251
+#: templates/report.html:328
 msgid "Submit Report"
 msgstr "Soumettre le rapport"
 
@@ -553,6 +553,12 @@ msgstr "Date de fin"
 #: templates/reports_list.html:29
 msgid "No reports submitted yet."
 msgstr "Aucun rapport soumis pour le moment."
+
+#~ msgid "Choose month"
+#~ msgstr "Choisissez un mois"
+
+#~ msgid "Choose year"
+#~ msgstr "Choisissez une année"
 
 #~ msgid "Mention major attacks, negotiations, etc."
 #~ msgstr "Mentionner les principales attaques, négociations, etc."

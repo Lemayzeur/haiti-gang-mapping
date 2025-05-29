@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 18:03-0500\n"
+"POT-Creation-Date: 2025-05-29 10:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: core/forms.py:8
-msgid "Choose month"
-msgstr "Chwazi mwa"
+msgid "Month"
+msgstr "Mwa"
 
 #: core/forms.py:12
-msgid "Choose year"
-msgstr "Chwazi ane"
+msgid "Year"
+msgstr "Ane"
 
 #: core/forms.py:18
 msgid "Kidnapping"
@@ -255,7 +255,7 @@ msgstr "Katye prensipal oswa zòn kote gang sa a opere/te opere?"
 
 #: core/models.py:72
 msgid "(e.g., Cité Soleil, Martissant, Delmas 32, etc.)"
-msgstr "(Egzanp: Site Solèy, Matissan, Delmas 32, elatriye.)"
+msgstr "(Egzanp: Site Solèy, Matisan, Dèlma 32, elatriye.)"
 
 #: core/models.py:82
 msgid "Which department does this location belong to?"
@@ -408,33 +408,33 @@ msgstr "Efase"
 msgid "No gang reports submitted yet."
 msgstr "Pa gen rapò sou gang ki soumèt pou kounye a."
 
-#: templates/report.html:22 templates/report.html:254
+#: templates/report.html:21 templates/report.html:331
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
 msgstr "Retounen nan akèy la"
 
-#: templates/report.html:23
+#: templates/report.html:22
 msgid "Gang Activity Report Form"
 msgstr "Fòmilè rapò sou aktivite gang"
 
-#: templates/report.html:107
+#: templates/report.html:138
 msgid "Select a department"
 msgstr "Chwazi yon depatman"
 
-#: templates/report.html:120
+#: templates/report.html:157
 msgid "Additional places this gang controls or used to control (if any):"
 msgstr "Lòt kote gang sa a kontwole oswa te konn kontwole (si genyen):"
 
-#: templates/report.html:175
+#: templates/report.html:230
 msgid "Add Another Area"
 msgstr "Ajoute yon lòt zòn"
 
-#: templates/report.html:187 templates/report.html:220
+#: templates/report.html:242 templates/report.html:287
 msgid "Select all that apply"
 msgstr "Seleksyone tout sa ki aplikab"
 
-#: templates/report.html:251
+#: templates/report.html:328
 msgid "Submit Report"
 msgstr "Soumèt Rapò a"
 
@@ -548,41 +548,47 @@ msgstr "Dat fen"
 msgid "No reports submitted yet."
 msgstr "Pa gen rapò ki soumèt pou kounye a."
 
-msgid "January"
-msgstr "Janvye"
+#~ msgid "Choose month"
+#~ msgstr "Chwazi mwa"
 
-msgid "February"
-msgstr "Fevriye"
+#~ msgid "Choose year"
+#~ msgstr "Chwazi ane"
 
-msgid "March"
-msgstr "Mas"
+#~ msgid "January"
+#~ msgstr "Janvye"
 
-msgid "April"
-msgstr "Avril"
+#~ msgid "February"
+#~ msgstr "Fevriye"
 
-msgid "May"
-msgstr "Me"
+#~ msgid "March"
+#~ msgstr "Mas"
 
-msgid "June"
-msgstr "Jen"
+#~ msgid "April"
+#~ msgstr "Avril"
 
-msgid "July"
-msgstr "Jiyè"
+#~ msgid "May"
+#~ msgstr "Me"
 
-msgid "August"
-msgstr "Out"
+#~ msgid "June"
+#~ msgstr "Jen"
 
-msgid "September"
-msgstr "Septanm"
+#~ msgid "July"
+#~ msgstr "Jiyè"
 
-msgid "October"
-msgstr "Oktòb"
+#~ msgid "August"
+#~ msgstr "Out"
 
-msgid "November"
-msgstr "Novanm"
+#~ msgid "September"
+#~ msgstr "Septanm"
 
-msgid "December"
-msgstr "Desanm"
+#~ msgid "October"
+#~ msgstr "Oktòb"
+
+#~ msgid "November"
+#~ msgstr "Novanm"
+
+#~ msgid "December"
+#~ msgstr "Desanm"
 
 #~ msgid "Mention major attacks, negotiations, etc."
 #~ msgstr "Mansyonne gwo atak, negosyasyon, elatriye."

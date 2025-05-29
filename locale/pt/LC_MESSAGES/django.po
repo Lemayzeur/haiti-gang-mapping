@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 18:17-0500\n"
+"POT-Creation-Date: 2025-05-29 10:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,13 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: core/forms.py:8
-msgid "Choose month"
-msgstr "Escolha o mês"
+msgid "Month"
+msgstr "Mês"
 
 #: core/forms.py:12
-msgid "Choose year"
-msgstr "Escolha o ano"
+msgid "Year"
+msgstr "Ano"
 
 #: core/forms.py:18
 msgid "Kidnapping"
@@ -141,6 +142,22 @@ msgstr "Fontes"
 msgid "Other source..."
 msgstr "Outra fonte..."
 
+#: core/forms.py:83
+msgid "Baz Pilat, 400 Mawozo..."
+msgstr ""
+
+#: core/forms.py:84
+msgid "Delmas 32"
+msgstr ""
+
+#: core/forms.py:86
+msgid "Kidnapping, extortion, drug trafficking..."
+msgstr ""
+
+#: core/forms.py:88
+msgid "G9, Baz Gran Ravin..."
+msgstr ""
+
 #: core/forms.py:143 templates/report_detail.html:32
 msgid "Yes"
 msgstr "Sim"
@@ -231,7 +248,9 @@ msgstr "Se souber, quando esta gangue parou de operar?"
 
 #: core/models.py:67 core/models.py:137
 msgid "Leave blank if the gang is still active or the date is unknown."
-msgstr "Deixe em branco se a gangue ainda estiver ativa ou se a data for desconhecida."
+msgstr ""
+"Deixe em branco se a gangue ainda estiver ativa ou se a data for "
+"desconhecida."
 
 #: core/models.py:71
 msgid "Main neighborhood or area where this gang operates/operated?"
@@ -254,8 +273,11 @@ msgid "What kind of activities is/was the gang involved in?"
 msgstr "Que tipo de atividades esta gangue está/estava envolvida?"
 
 #: core/models.py:87
-msgid "Be as specific as possible. (e.g., kidnappings, drug trafficking, extortion)"
-msgstr "Seja o mais específico possível. (Ex.: sequestros, tráfico de drogas, extorsão)"
+msgid ""
+"Be as specific as possible. (e.g., kidnappings, drug trafficking, extortion)"
+msgstr ""
+"Seja o mais específico possível. (Ex.: sequestros, tráfico de drogas, "
+"extorsão)"
 
 #: core/models.py:91
 msgid "Describe the activities or key events involving this gang."
@@ -335,8 +357,12 @@ msgstr "Mapeamento de Gangues no Haiti"
 
 #: templates/base.html:11 templates/base.html:23 templates/base.html:29
 #: templates/home.html:12
-msgid "This survey is part of a research project to map the evolution of gang-controlled zones across Haiti."
-msgstr "Esta pesquisa faz parte de um projeto para mapear a evolução das zonas controladas por gangues no Haiti."
+msgid ""
+"This survey is part of a research project to map the evolution of gang-"
+"controlled zones across Haiti."
+msgstr ""
+"Esta pesquisa faz parte de um projeto para mapear a evolução das zonas "
+"controladas por gangues no Haiti."
 
 #: templates/home.html:10
 msgid "Haiti Gang Mapping Project"
@@ -349,7 +375,11 @@ msgid ""
 "            Your safety and privacy are our top priorities — do not share "
 "personal details unless comfortable."
 msgstr ""
-"Sua contribuição nos ajudará a construir uma visão mais clara de como essas zonas evoluíram ao longo do tempo. Por favor, forneça informações precisas e respeitosas.\nSua segurança e privacidade são nossas principais prioridades — não compartilhe informações pessoais a menos que esteja confortável."
+"Sua contribuição nos ajudará a construir uma visão mais clara de como essas "
+"zonas evoluíram ao longo do tempo. Por favor, forneça informações precisas e "
+"respeitosas.\n"
+"Sua segurança e privacidade são nossas principais prioridades — não "
+"compartilhe informações pessoais a menos que esteja confortável."
 
 #: templates/home.html:18
 msgid "Start Now"
@@ -383,33 +413,35 @@ msgstr "Excluir"
 msgid "No gang reports submitted yet."
 msgstr "Nenhum relatório de gangue foi enviado ainda."
 
-#: templates/report.html:22 templates/report.html:254
+#: templates/report.html:21 templates/report.html:331
 #: templates/report_detail.html:6 templates/report_detail.html:105
 #: templates/report_success.html:13 templates/reports_list.html:34
 msgid "Back to Home"
 msgstr "Voltar para a página inicial"
 
-#: templates/report.html:23
+#: templates/report.html:22
 msgid "Gang Activity Report Form"
 msgstr "Formulário de Relatório de Atividades de Gangues"
 
-#: templates/report.html:107
+#: templates/report.html:138
 msgid "Select a department"
 msgstr "Selecione um departamento"
 
-#: templates/report.html:120
+#: templates/report.html:157
 msgid "Additional places this gang controls or used to control (if any):"
-msgstr "Lugares adicionais que esta gangue controla ou costumava controlar (se houver):"
+msgstr ""
+"Lugares adicionais que esta gangue controla ou costumava controlar (se "
+"houver):"
 
-#: templates/report.html:175
+#: templates/report.html:230
 msgid "Add Another Area"
 msgstr "Adicionar Outra Área"
 
-#: templates/report.html:187 templates/report.html:220
+#: templates/report.html:242 templates/report.html:287
 msgid "Select all that apply"
 msgstr "Selecione todas as opções que correspondem"
 
-#: templates/report.html:251
+#: templates/report.html:328
 msgid "Submit Report"
 msgstr "Enviar Relatório"
 
@@ -419,8 +451,10 @@ msgstr "Excluir Relatório"
 
 #: templates/report_confirm_delete.html:7
 #, python-format
-msgid "Are you sure you want to delete the report <strong>%(gang_name)s</strong>?"
-msgstr "Tem certeza de que deseja excluir o relatório <strong>%(gang_name)s</strong>?"
+msgid ""
+"Are you sure you want to delete the report <strong>%(gang_name)s</strong>?"
+msgstr ""
+"Tem certeza de que deseja excluir o relatório <strong>%(gang_name)s</strong>?"
 
 #: templates/report_confirm_delete.html:9
 msgid "Yes, Delete"
@@ -479,8 +513,12 @@ msgid "Thank you for your report!"
 msgstr "Obrigado pelo seu relatório!"
 
 #: templates/report_success.html:8
-msgid "Your submission has been received and is pending validation. We appreciate your contribution to a safer and more informed Haiti."
-msgstr "Sua submissão foi recebida e está aguardando validação. Agradecemos sua contribuição para um Haiti mais seguro e informado."
+msgid ""
+"Your submission has been received and is pending validation. We appreciate "
+"your contribution to a safer and more informed Haiti."
+msgstr ""
+"Sua submissão foi recebida e está aguardando validação. Agradecemos sua "
+"contribuição para um Haiti mais seguro e informado."
 
 #: templates/report_success.html:12
 msgid "Submit Another Report"
@@ -517,3 +555,9 @@ msgstr "Data de término"
 #: templates/reports_list.html:29
 msgid "No reports submitted yet."
 msgstr "Nenhum relatório foi enviado ainda."
+
+#~ msgid "Choose month"
+#~ msgstr "Escolha o mês"
+
+#~ msgid "Choose year"
+#~ msgstr "Escolha o ano"
